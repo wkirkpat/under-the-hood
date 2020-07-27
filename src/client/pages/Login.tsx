@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
 
-export default class Login extends React.Component {
+export default class Login extends React.Component<ILoginProps, ILoginState> {
   render() {
     return (
       <div>

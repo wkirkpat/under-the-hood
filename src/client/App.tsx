@@ -57,7 +57,7 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route path="/maintenance">
               <Maintenance
                 title="title"
-                hasMenu
+				hasMenu
                 hasLogin
                 hasProfile
                 hasSearch
@@ -85,7 +85,14 @@ class App extends React.Component<IAppProps, IAppState> {
               />
             </Route>
             <Route path="/login">
-              <Login />
+              <Login
+                title="title"
+                hasMenu
+                hasLogin
+                hasProfile
+                hasSearch
+                subtitle="subtitle"
+              />
             </Route>
             <Route path="/register">
               <Registration
