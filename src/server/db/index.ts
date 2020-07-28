@@ -1,6 +1,7 @@
 import * as mysql from "mysql";
 import config from "../config";
 import Users from "./queries/users";
+import Vehicles from "./queries/vehicles";
 
 const pool = mysql.createPool(config.mysql);
 
@@ -11,7 +12,6 @@ export const Query = <T= any>(query: string, values?: any) => {
         const sql = mysql.format(query, values);   //This formats the commands being sent to mysql in such a way that we can understand them
         console.log(sql);  //This console logs the actual sql commands being sent to the database to help with debugging
 
-
         pool.query(sql, (err, results) => {
             if(err) return reject (err);
             else return resolve(results);
@@ -21,5 +21,6 @@ export const Query = <T= any>(query: string, values?: any) => {
 
 //Want to make sure to export query folders here
 export default {
-    Users
+    Users,
+    Vehicles
 }
