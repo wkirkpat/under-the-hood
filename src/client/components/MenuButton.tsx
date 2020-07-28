@@ -11,14 +11,14 @@ export default class MenuButton extends React.Component<
         <button
           className="btn btn-success dropdown-toggle"
           type="button"
-          id="dropdownMenu2"
+          id="menuButton"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
         >
           Menu
         </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <div className="dropdown-menu" aria-labelledby="menuButton">
          <Link to="/diy"> <button className="dropdown-item" type="button">
             Do It Yourself
           </button></Link>
