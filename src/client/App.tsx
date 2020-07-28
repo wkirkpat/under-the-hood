@@ -61,7 +61,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 hasLogin
                 hasProfile
                 hasSearch
-                subtitle="subtitle"
+                subtitle="Maintenance"
               />
             </Route>
             <Route path="/symptoms">

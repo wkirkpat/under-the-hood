@@ -7,7 +7,7 @@ import { TextField } from "@material-ui/core";
 export default class Maintenance extends React.Component<
   IMaintenanceProps,
   IMaintenanceState
-> {
+  > {
   render() {
     return (
       <>
@@ -107,17 +107,17 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Tires Air Pressure:</p>
           <p className="card-text">Date:</p>
           <form className="container" noValidate>
-           <TextField
-            id="date"
-             label="Birthday"
-    type="date"
-    defaultValue="2017-05-24"
-    className="textField"
-    InputLabelProps={{
-      shrink: true,
-    }}
-  />
-</form>
+            <TextField
+              id="date"
+              label="Birthday"
+              type="date"
+              defaultValue="2017-05-24"
+              className="textField"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </form>
         </div>
       </>
     );
