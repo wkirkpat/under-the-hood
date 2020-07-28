@@ -4,10 +4,11 @@ import Header from "../components/Header";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { TextField } from "@material-ui/core";
 
-export default class Maintenance extends React.Component<
-  IMaintenanceProps,
-  IMaintenanceState
-  > {
+export default class Maintenance extends React.Component<IMaintenanceProps,IMaintenanceState> {
+
+
+
+
   render() {
     return (
       <>
@@ -21,10 +22,16 @@ export default class Maintenance extends React.Component<
             hasSearch
           />
         </div>
+        <div className="carInfo">
+            <h2 className="user">Will Kirkpatrick</h2>
+            <p className="make">Chevrolet</p>
+            <p className="model">Equinox</p>
+            <p className="year">2015</p>
+        </div>
         <img
           src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
           height="200px"
-          width="200px"
+          width="350px"
         ></img>
         <div className="previousOilChange mt-2">
           <h2 className="card-title">Previous Oil Change:</h2>
@@ -33,7 +40,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Date:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -63,7 +70,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Pads Front:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -74,7 +81,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Pads Rear:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -85,7 +92,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Routers Front:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -96,7 +103,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Routers Rear:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -107,7 +114,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Calipers:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -118,7 +125,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Drums:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -129,7 +136,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Brake Hoses:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -237,7 +244,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Date:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -267,7 +274,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Tires Rotated:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -278,7 +285,7 @@ export default class Maintenance extends React.Component<
           <p className="card-text">Tires Swapped:</p>
           <TextField
           id="datetime-local"
-          label="Next appointment"
+          label="Previous appointment"
           type="datetime-local"
           defaultValue="2017-05-24T10:30"
           className='container'
@@ -288,17 +295,6 @@ export default class Maintenance extends React.Component<
           />
           <p className="card-text">Tires Size:</p>
           <p className="card-text">Tires Air Pressure:</p>
-          <p className="card-text">Date:</p>
-          <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className='container'
-          InputLabelProps={{
-          shrink: true,
-          }}
-          />
         </div>
         <div className="nextTireMaintenance">
           <h2 className="card-title">Next Tire Maintenance</h2>
@@ -326,19 +322,6 @@ export default class Maintenance extends React.Component<
           />
           <p className="card-text">Tires Size:</p>
           <p className="card-text">Tires Air Pressure:</p>
-          <p className="card-text">Date:</p>
-          <form className="container" noValidate>
-            <TextField
-              id="date"
-              label="Birthday"
-              type="date"
-              defaultValue="2017-05-24"
-              className="textField"
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-          </form>
         </div>
       </>
     );
