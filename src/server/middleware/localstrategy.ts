@@ -15,8 +15,8 @@ passport.use(
     async (email, password, done) => {
       try {
         let [user]: any = await DB.Users.getUserByEmail(email);
-        if (user && comparePasswords(password, user.password)) {
-          delete user.password;
+        if (user && comparePasswords(password, user.pass)) {
+          delete user.pass;
           done(null, user);
         } else {
           done(null, false);

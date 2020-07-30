@@ -9,7 +9,7 @@ passport.use(
       let payload = await validToken(token);
       let [user]: any = await DB.Users.getUserById(payload.userid);
       if (user) {
-        delete user.password;
+        delete user.pass;
         done(null, user);
       } else {
         done(null, false);

@@ -1,7 +1,8 @@
 import { Query } from "../index";
 
 //gets a list of all user names
-export const getAllUsers = async () => Query("SELECT users.username FROM users");
+export const getAllUsers = async () =>
+  Query("SELECT users.username FROM users");
 
 //gets a single user by id. This only returns the username, firstname, and lastname for security reasons.
 //If we need to gather other info we can alter this no problem, we just have to be careful to never send
@@ -16,8 +17,22 @@ export const getUserById = async (id: string) =>
 export const getUserByEmail = async (email: string) =>
   Query("SELECT * FROM users WHERE email = ?", [email]);
 
+//Creates a new user
+export const insert = async (
+  username: string,
+  email: string,
+  firstName: string,
+  lastName: string,
+  password: string
+) =>
+  Query(
+    "INSERT INTO users(username, email, pass, firstName, lastName) VALUES(?,?,?,?,?)",
+    [username, email, password, firstName, lastName]
+  );
+
 export default {
   getAllUsers,
   getUserById,
   getUserByEmail,
+  insert
 };
