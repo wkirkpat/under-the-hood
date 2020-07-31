@@ -4,11 +4,11 @@ import DB from "../../db";
 const router = express.Router();
 
 const isAdmin: express.RequestHandler = (req: any, res, next) => {
-  if(!req.user) {
+  if (!req.user) {
     return res.sendStatus(401);
   } else {
     return next();
-  }
+  } 
 };
 
 //Route for getting a users vehicles based on their user id
