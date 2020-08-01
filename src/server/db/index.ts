@@ -2,6 +2,7 @@ import * as mysql from "mysql";
 import config from "../config";
 import Users from "./queries/users";
 import Vehicles from "./queries/vehicles";
+import Tokens from "./queries/accesstokens";
 
 const pool = mysql.createPool(config.mysql);
 
@@ -39,5 +40,6 @@ export const Query = <T = any>(query: string, values?: any)=> {
 //Want to make sure to export query folders here
 export default {
     Users,
-    Vehicles
+    Vehicles,
+    Tokens
 }

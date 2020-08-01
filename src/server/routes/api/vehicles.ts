@@ -3,8 +3,16 @@ import DB from "../../db";
 
 const router = express.Router();
 
+const isAdmin: express.RequestHandler = (req: any, res, next) => {
+  if (!req.user) {
+    return res.sendStatus(401);
+  } else {
+    return next();
+  } 
+};
+
 //Route for getting a users vehicles based on their user id
-router.get("/info/:id", async (req, res, next) => {
+router.get("/info/:id", isAdmin, async (req, res, next) => {
   try {
     let vehicles = await DB.Vehicles.getUserVehicles(req.params.id);
     res.json(vehicles);
