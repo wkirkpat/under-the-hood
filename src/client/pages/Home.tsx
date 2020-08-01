@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import SimpleImageSlider from "react-simple-image-slider";
-import ReactPhotoCollage from "react-photo-collage";
+import {ReactPhotoCollage} from "react-photo-collage";
 
 export default class Home extends React.Component<IHomeProps, IHomeState> {
   render() {
@@ -35,19 +35,20 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
           <div style={{ marginLeft: "50px", marginRight: "150px", lineHeight: "200%" }}>Learn More Information</div>
           <a style={{ lineHeight: "200%" }} target="_blank" href="http://www.google.com">{"MORE >"}</a>
         </div>
-        <ReactPhotoCollage width="100vw" height={["20vh", "20vh"]} layout={[3, 2]} photos={[{ src: "images/Home1" }, { src: "images/Home2" }, { src: "images/Home3" }, { src: "images/Home5" }, { src: "images/Home6" }]} />
+        <ReactPhotoCollage width="100vw" height={["40vh", "40vh"]} layout={[3, 3]} photos={[{ src: "images/Home1.jpg" }, { src: "images/Home2.jpg" }, { src: "images/Home3.jpg" }, { src: "images/Home5.jpg" }, { src: "images/Home6.jpg" }, { src: "images/Home11.jpg" }]} showNumOfRemainingPhotos={false} />
 
-        <div style={{ textAlign: "center", fontSize: 40, }}>SAFETY COME FIRST</div>
+        <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid", padding:"15px" }}>SAFETY COME FIRST</div>
 
-        <ReactPhotoCollage width="100vw" height={["20vh", "20vh"]} layout={[2, 1]} photos={[{ src: "images/Home7" }, { src: "images/Home8" }, { src: "images/Home9" }]} />
-        <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid" }}>OUR COMPANY</div>
-        <div style={{ textAlign: "center", fontSize: 20, }}>MISSION STATEMENT</div>
+        <ReactPhotoCollage width="100vw" height={["40vh", "40vh"]} layout={[3, 3]} photos={[{ src: "images/Home7.jpg" }, { src: "images/Home8.jpg" }, { src: "images/Home9.jpg" }, { src: "images/Home12.jpg" }, { src: "images/Home13.jpg" }, { src: "images/Home10.jpg" }]} showNumOfRemainingPhotos={false} />
+        <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid", padding:"15px" }}>OUR COMPANY</div>
+        <div style={{padding:"30px"}}>
+        <div style={{ fontSize: 20, fontWeight:"bold" }}>Mission Statement:</div>
+        <div style={{ fontSize: 20, fontWeight:"bold" }}>To provide safe travels to family through car maintenance you can depend on.</div>
+        </div>
       </div>
     );
   }
 }
-
-<button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
 
 
 
