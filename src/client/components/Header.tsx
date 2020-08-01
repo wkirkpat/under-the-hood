@@ -16,7 +16,7 @@ export default class Header extends React.Component<
   }
   render() {
     return (
-      <div style={{ height: "100px", backgroundColor: "#42f5b9" }}>
+      <div style={{ height: "10vh", backgroundColor: "#42f5b9" }}>
         <div
           style={{
             display: "flex",
