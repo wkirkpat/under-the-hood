@@ -19,23 +19,6 @@ export const Query = <T= any>(query: string, values?: any) => {
         })
     })
 }
-export const Connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: "Jamesbond1",
-    database: "under_the_hood"
-});
-export const Query = <T = any>(query: string, values?: any)=> {
-    return new Promise <T>((resolve,reject) =>{
-        Connection.query(query, values, (err,results) => {
-            if(err) return reject(err)
-            resolve(results)
-
-        })
-    })
-
-}
 
 //Want to make sure to export query folders here
 export default {
