@@ -1,6 +1,5 @@
 import * as crypto from "crypto";
 import * as jwt from "jsonwebtoken";
-
 import config from "../../config";
 import DB from "../../db";
 

@@ -4,6 +4,7 @@ import { createToken } from "../../utils/security/tokens";
 
 const router = express.Router();
 
+//Use this route to verify a login and issue a token if it is correct
 router.post("/", passport.authenticate("local"), async (req: any, res, next) => {
   try {
     let token = await createToken({ userid: req.user.id });

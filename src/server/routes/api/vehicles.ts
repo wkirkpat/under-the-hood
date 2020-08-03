@@ -3,7 +3,11 @@ import DB from "../../db";
 
 const router = express.Router();
 
-const isAdmin: express.RequestHandler = (req: any, res, next) => {
+//This allows us to block ourselves off from routes for testing purposes. We could
+//also use this on a route to prevent a user who is not logged in from using it,
+//but there are other, better ways to do that as well. In order to use this,
+//Just put it as the second argument in a route
+const isUser: express.RequestHandler = (req: any, res, next) => {
   if (!req.user) {
     return res.sendStatus(401);
   } else {
@@ -12,7 +16,7 @@ const isAdmin: express.RequestHandler = (req: any, res, next) => {
 };
 
 //Route for getting a users vehicles based on their user id
-router.get("/info/:id", isAdmin, async (req, res, next) => {
+router.get("/info/:id", isUser, async (req, res, next) => {
   try {
     let vehicles = await DB.Vehicles.getUserVehicles(req.params.id);
     res.json(vehicles);

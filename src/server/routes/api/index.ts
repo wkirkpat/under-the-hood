@@ -5,6 +5,8 @@ import * as passport from "passport";
 
 const router = express.Router();
 
+//This is implementing our bearer strategy so we can check for a bearer token on any of our api 
+//routes. This is effectively connecting our token validation to the server.
 router.use((req, res, next) => {
   passport.authenticate(
     "bearer",

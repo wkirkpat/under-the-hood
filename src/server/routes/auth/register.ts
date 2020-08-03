@@ -5,6 +5,8 @@ import DB from "../../db";
 
 const router = express.Router();
 
+//Use this route to create a new user in the database. This will salt and hash the password
+//As well as issue a token so the user doesn't have to login immedaitely after creating an account
 router.post("/", async (req, res, next) => {
   try {
     let user = req.body;
