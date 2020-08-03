@@ -11,8 +11,8 @@ export default class Details extends React.Component<
       <div>
         <Header
           title="Details"
-          subtitle="subtitle"
-          hasLogin
+          subtitle=""
+          hasLogin={false}
           hasMenu
           hasProfile
           hasSearch

@@ -8,8 +8,8 @@ export default class Maintenance extends React.Component<IMaintenanceProps, IMai
       <>
         <div>
           <Header
-            hasLogin
-            subtitle="subtitle"
+            hasLogin={false}
+            subtitle=""
             title="Maintenance"
             hasMenu
             hasProfile

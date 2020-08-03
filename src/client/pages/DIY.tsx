@@ -6,7 +6,7 @@ import DIYFuncItem from './DIYFuncItem';
 export default class DIY extends React.Component<IDIYProps, IDIYState> {
   render() {
     return <div>
-      <Header title="Do It Yourself" subtitle="subtitle" hasLogin hasMenu hasProfile hasSearch />
+      <Header title="Do It Yourself" subtitle="" hasLogin={false} hasMenu hasProfile hasSearch />
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* MENU */}
         <div style={{ flex: "1", paddingTop: "10px", backgroundColor: "#f5f5f5" }}>

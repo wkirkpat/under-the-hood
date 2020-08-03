@@ -15,8 +15,8 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
     return (
       <div>
         <Header
-          subtitle="subtitle"
-          hasLogin
+          subtitle=""
+          hasLogin={false}
           title="Under the Hood"
           hasMenu
           hasProfile

@@ -7,12 +7,12 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
     return (
       <div>
         <Header
-          hasMenu
-          hasProfile
-          hasSearch
-          hasLogin
+          hasMenu={false}
+          hasProfile={false}
+          hasSearch={false}
+          hasLogin={false}
           title="Under the Hood"
-          subtitle="Login"
+          subtitle="Who's Under the Hood"
         />
         <div style={{ top: "75%", left: "50%", position: "absolute" }}>
           <button>

@@ -10,10 +10,10 @@ export default class Registration extends React.Component<
     return (
       <div>
         <Header
-          hasLogin
-          hasSearch
-          hasProfile
-          hasMenu
+          hasLogin={false}
+          hasSearch={false}
+          hasProfile={false}
+          hasMenu={false}
           title="Under the Hood"
           subtitle="Who's Under the Hood?"
         />

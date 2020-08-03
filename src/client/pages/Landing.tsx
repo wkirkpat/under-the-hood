@@ -10,11 +10,11 @@ export default class Landing extends React.Component<
       <div>
         <Header
           hasLogin
-          subtitle="subtitle"
+          subtitle=""
           title="Under the Hood"
-          hasSearch
-          hasMenu
-          hasProfile
+          hasSearch={false}
+          hasMenu={false}
+          hasProfile={false}
         />
       </div>
     );

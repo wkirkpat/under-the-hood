@@ -9,8 +9,8 @@ export default class Symptoms extends React.Component<
     return (
       <div>
         <Header
-          hasLogin
-          subtitle="subtitle"
+          hasLogin={false}
+          subtitle=""
           title="Symptoms Diagnosis"
           hasMenu
           hasProfile

@@ -9,8 +9,8 @@ export default class Profile extends React.Component<
     return (
       <div>
         <Header
-          hasLogin
-          subtitle="subtitle"
+          hasLogin={false}
+          subtitle=""
           title="Your Profile"
           hasMenu
           hasProfile

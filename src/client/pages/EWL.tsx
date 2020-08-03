@@ -7,7 +7,7 @@ export default class EWL extends React.Component<IEWLProps, IEWLState> {
   render() {
     console.log(data);
     return <div style={{backgroundColor:"#F2F3F4"}}>
-      <Header title="Engine Warning Light" subtitle="EWL" hasLogin hasMenu hasProfile hasSearch />
+      <Header title="Engine Warning Light" subtitle="" hasLogin={false} hasMenu hasProfile hasSearch />
       <img src="" />
       <div style={{textAlign:"center", fontWeight:"bold", fontSize:"x-large"}}>UNDERSTANDING WHAT EACH WARNING LIGHT MEANS</div>
       <div style={{textAlign:"center"}}>This guide is intended to give insight into each car warning light, symbols, and indicators.</div>
