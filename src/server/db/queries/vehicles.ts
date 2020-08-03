@@ -11,7 +11,7 @@ export const getVehicleInfo = async (
   model: string,
   year: number
 ) =>
-  Query("SELECT * FROM vehicleData WHERE make = ? AND model = ? AND year = ?", [
+  Query("SELECT * FROM vehicleData WHERE make = ? AND model = ? AND _year = ?", [
     make,
     model,
     year,

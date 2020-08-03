@@ -26,7 +26,7 @@ router.get("/info/:id", isUser, async (req, res, next) => {
   }
 });
 
-//Route for getting info on a specific vehicle based on its vehicle id
+//Route for getting info on a specific vehicle based on its make, model, and year
 router.get("/info", async (req, res) => {
   try {
     let data = await DB.Vehicles.getVehicleInfo(
