@@ -11,7 +11,8 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
 
   //When submit is pressed, this creates a new object called diagnosis that holds all the maintenance information
   //It then sets showResults to true which triggers a portion of the page to diplay showing the results of the
-  //dtc submission
+  //dtc submission. This will also set showAlert to true if an incorrect code is submitted, prompting
+  //the page to render an alert telling the user their dtc is wrong
   const handleSubmit = async () => {
     try {
       let info = await json(`/api/vehicles/dtc/${userDtc}`);
