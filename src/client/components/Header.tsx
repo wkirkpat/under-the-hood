@@ -36,6 +36,7 @@ export default class Header extends React.Component<
                       width: "50px",
                       backgroundColor: "#a3a3a3",
                     }}
+                    className="mt-3"
                   />
                   <span>{this.state.userInfo.name}</span>
                 </Link>
@@ -44,15 +45,21 @@ export default class Header extends React.Component<
           ) : (
             <div />
           )}
-          <span>{this.props.title}</span>
-          {this.props.hasSearch ? <input placeholder="Search..." /> : null}
+          <h3 className="mt-4">{this.props.title}</h3>
+          {this.props.hasSearch ? (
+            <input className="h-25 m-4" placeholder="Search..." />
+          ) : null}
           {this.props.hasLogin ? (
-            <div>
-              <button>
-                <Link to="/login">Login</Link>
+            <div className="mt-3 mr-3">
+              <button className="btn btn-primary btn-sm border border-dark mr-2">
+                <Link className="text-dark" to="/login">
+                  Login
+                </Link>
               </button>
-              <button>
-                <Link to="/register">Register</Link>
+              <button className="btn btn-primary btn-sm border border-dark">
+                <Link className="text-dark" to="/register">
+                  Register
+                </Link>
               </button>
             </div>
           ) : null}
@@ -78,4 +85,3 @@ interface IHeaderState {
     name: string;
   };
 }
-

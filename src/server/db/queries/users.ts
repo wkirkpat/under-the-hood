@@ -34,5 +34,5 @@ export default {
   getAllUsers,
   getUserById,
   getUserByEmail,
-  insert
+  insert,
 };

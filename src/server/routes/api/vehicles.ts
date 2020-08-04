@@ -12,7 +12,7 @@ const isUser: express.RequestHandler = (req: any, res, next) => {
     return res.sendStatus(401);
   } else {
     return next();
-  } 
+  }
 };
 
 //Route for getting a users vehicles based on their user id
@@ -53,9 +53,9 @@ router.get("/maintenance/:id", async (req, res) => {
 });
 
 //Route for getting maintenance info of a vehicle based on its dtc(Check engine code)
-router.get("/dtc", async (req, res) => {
+router.get("/dtc/:id", async (req, res) => {
   try {
-    let data = await DB.Vehicles.getEngineLightInfo(req.body.dtc);
+    let data = await DB.Vehicles.getEngineLightInfo(req.params.id);
     res.json(data);
   } catch (e) {
     console.log(e);
