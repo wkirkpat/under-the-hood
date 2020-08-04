@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { json } from "../utils/api";
+import SymptomsAlert from "../components/SymptomsAlert";
 
 const Symptoms: React.FC<ISymptomsProps> = (props) => {
   const [maintenanceInfo, setMaintenanceInfo] = useState([]);
@@ -15,15 +16,13 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
     try {
       let info = await json(`/api/vehicles/dtc/${userDtc}`);
       setMaintenanceInfo(info);
-      if (info) setShowResults(true);
+      if (info[0]) { 
+        setShowResults(true) 
+      } else { setShowAlert(true) };
     } catch (e) {
       throw e;
     }
   };
-
-  useEffect(() => {
-
-  }, [maintenanceInfo]);
 
   return (
     <>
@@ -90,7 +89,9 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
               </div>
             </>
           );
-        } else {
+        } else if (showAlert) {
+          return <SymptomsAlert />
+        } {
           return <></>;
         }
       })()}
