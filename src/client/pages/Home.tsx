@@ -16,7 +16,7 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
       <div>
         <Header
           subtitle=""
-          hasLogin={false}
+          hasLogin
           title="Under the Hood"
           hasMenu
           hasProfile
@@ -37,7 +37,7 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
         </div>
         <ReactPhotoCollage width="100vw" height={["40vh", "40vh"]} layout={[3, 3]} photos={[{ src: "images/Home1.jpg" }, { src: "images/Home2.jpg" }, { src: "images/Home3.jpg" }, { src: "images/Home5.jpg" }, { src: "images/Home6.jpg" }, { src: "images/Home11.jpg" }]} showNumOfRemainingPhotos={false} />
 
-        <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid", padding:"15px" }}>SAFETY COME FIRST</div>
+        <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid", padding:"15px" }}>SAFETY COMES FIRST</div>
 
         <ReactPhotoCollage width="100vw" height={["40vh", "40vh"]} layout={[3, 3]} photos={[{ src: "images/Home7.jpg" }, { src: "images/Home8.jpg" }, { src: "images/Home9.jpg" }, { src: "images/Home12.jpg" }, { src: "images/Home13.jpg" }, { src: "images/Home10.jpg" }]} showNumOfRemainingPhotos={false} />
         <div style={{ textAlign: "center", fontSize: 40, borderStyle: "solid", padding:"15px" }}>OUR COMPANY</div>

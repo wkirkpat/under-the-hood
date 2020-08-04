@@ -45,17 +45,21 @@ export default class Header extends React.Component<
           ) : (
             <div />
           )}
-          <span>{this.props.title}</span>
+          <h3 className="mt-4">{this.props.title}</h3>
           {this.props.hasSearch ? (
-            <input className="" placeholder="Search..." />
+            <input className="h-25 m-4" placeholder="Search..." />
           ) : null}
           {this.props.hasLogin ? (
-            <div>
-              <button>
-                <Link to="/login">Login</Link>
+            <div className="mt-3 mr-3">
+              <button className="btn btn-primary btn-sm border border-dark mr-2">
+                <Link className="text-dark" to="/login">
+                  Login
+                </Link>
               </button>
-              <button>
-                <Link to="/register">Register</Link>
+              <button className="btn btn-primary btn-sm border border-dark">
+                <Link className="text-dark" to="/register">
+                  Register
+                </Link>
               </button>
             </div>
           ) : null}

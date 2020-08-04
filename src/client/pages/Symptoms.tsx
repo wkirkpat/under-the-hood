@@ -63,12 +63,12 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
                 <p>{maintenanceInfo[0].problemName}</p>
               </div>
               <div className="container-fluid d-flex">
-                <div className="card col-4">
+                <div className="card col-4 shadow">
                   <div className="card-body">
                     {maintenanceInfo[0].problemDesc}
                   </div>
                 </div>
-                <div className="card col-4">
+                <div className="card col-4 shadow">
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item">
                       Urgency - {maintenanceInfo[0].urgencyLevel}
@@ -81,7 +81,7 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
                     </li>
                   </ul>
                 </div>
-                <div className="card col-4">
+                <div className="card col-4 shadow">
                   <div className="card-body">
                     {maintenanceInfo[0].parts} - ${maintenanceInfo[0].partCost}
                     .00
