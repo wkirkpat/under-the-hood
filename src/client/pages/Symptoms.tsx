@@ -9,17 +9,16 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
   const [userDtc, setDtc] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
-  //When submit is pressed, this creates a new object called diagnosis that holds all the maintenance information
-  //It then sets showResults to true which triggers a portion of the page to diplay showing the results of the
-  //dtc submission. This will also set showAlert to true if an incorrect code is submitted, prompting
-  //the page to render an alert telling the user their dtc is wrong
+//If it gets a result, it displays the info the screen, if it doesn't, it displays an alert
   const handleSubmit = async () => {
     try {
       let info = await json(`/api/vehicles/dtc/${userDtc}`);
       setMaintenanceInfo(info);
-      if (info[0]) { 
-        setShowResults(true) 
-      } else { setShowAlert(true) };
+      if (info[0]) {
+        setShowResults(true);
+      } else {
+        setShowAlert(true);
+      }
     } catch (e) {
       throw e;
     }
@@ -29,8 +28,8 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
     <>
       <Header
         hasLogin={false}
-        subtitle="Got your fault code? Enter it here to see what's wrong with your vehicle!"
-        title="Symptoms Diagnosis"
+        subtitle=""
+        title="Diagnosis"
         hasMenu
         hasProfile
         hasSearch
@@ -55,6 +54,7 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
           </button>
         </div>
       </div>
+
       {(() => {
         if (showResults) {
           return (
@@ -91,15 +91,23 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
             </>
           );
         } else if (showAlert) {
-          return <SymptomsAlert />
-        } {
+          return <SymptomsAlert />;
+        }
+        {
           return <></>;
         }
       })()}
+      <div
+        className="alert alert-info shadow border border-dark rounded m-4"
+        role="alert"
+      >
+        *Your DTC, also known as a fault code, is the code that references your
+        check engine light issues. If you need this code, head to your local
+        autozone where you can run a free check on your vehicle to get the code.
+      </div>
     </>
   );
 };
-
 
 interface ISymptomsProps {
   subtitle: string;

@@ -57,7 +57,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="Maintenance"
               />
             </Route>
-            <Route path="/symptoms">
+            <Route path="/diagnosis">
               <Symptoms
                 title="title"
                 hasMenu
