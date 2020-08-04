@@ -11,11 +11,10 @@ export const getVehicleInfo = async (
   model: string,
   year: number
 ) =>
-  Query("SELECT * FROM vehicleData WHERE make = ? AND model = ? AND _year = ?", [
-    make,
-    model,
-    year,
-  ]);
+  Query(
+    "SELECT * FROM vehicleData WHERE make = ? AND model = ? AND _year = ?",
+    [make, model, year]
+  );
 
 //This selects everything from the Maintenance table based on the vehicleId passed in. This will be used in testing mostly as the API requires a VIN number
 //And a check engine code(dtc) to get the same info.

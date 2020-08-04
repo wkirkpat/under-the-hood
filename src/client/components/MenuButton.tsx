@@ -8,7 +8,7 @@ export default class MenuButton extends React.Component<
 > {
   render() {
     return (
-    <Dropdown>
+    <Dropdown className="m-4">
     <Dropdown.Toggle variant="success" id="dropdown-basic">
    Menu
      </Dropdown.Toggle>
