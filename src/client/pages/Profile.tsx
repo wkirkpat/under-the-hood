@@ -20,7 +20,7 @@ const Profile: React.FC<IProfileProps> = () => {
   };
 
   const handleAdd = () => {
-    setShowAddBar(true);
+    setShowAddBar(!showAddBar);
   };
 
   const handleNewVehicle = () => {
@@ -31,6 +31,7 @@ const Profile: React.FC<IProfileProps> = () => {
         return res.json();
       })
       .then((data) => {
+        if(data.Results[0].Make) {
         let newCar = {
           vin: data.Results[0].VIN,
           make: data.Results[0].Make,
@@ -38,8 +39,7 @@ const Profile: React.FC<IProfileProps> = () => {
           year: data.Results[0].ModelYear,
         }
         let result = json("/api/vehicles/add/1", "POST", newCar);
-        getCarInfo();
-        console.log(newCar);
+        getCarInfo(); }
       });
   };
 
@@ -123,9 +123,6 @@ interface IProfileProps extends RouteComponentProps {
   hasProfile: boolean;
   hasMenu: boolean;
   title: string;
-  history: any;
-  location: any;
-  match: any;
 }
 
 // interface carInfo {
