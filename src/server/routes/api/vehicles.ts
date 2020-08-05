@@ -94,7 +94,7 @@ router.put("/mileage/:id", async (req, res) => {
 // and getting all the data for that specific car. **
 router.post("/add/:id", async (req, res) => {
   try {
-    res.json(await DB.Vehicles.addNewVehicle(req.body.vin, req.params.id));
+    res.json(await DB.Vehicles.addNewVehicle(req.body.vin, req.params.id, req.body.make, req.body.model, req.body.year));
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

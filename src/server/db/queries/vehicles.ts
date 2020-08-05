@@ -45,8 +45,8 @@ export const updateMileage = async (mileage: number, id: string) =>
 //Get their vin number and use that to make a request to the API which will send back all of the vehicle information that we can then store in
 //The database. This is the one query we can't easily test without the api. We can get the userid from the current users token
 //Which will make sure we set the correct vehicle to the correct user.
-export const addNewVehicle = async (vin: string, userid: string) =>
-  Query("INSERT INTO userVehicles(vin, userid) VALUES(?, ?)", [vin, userid]);
+export const addNewVehicle = async (vin: string, userid: string, make: string, model: string, year: number) =>
+  Query("INSERT INTO userVehicles(vin, userid, make, model, _year) VALUES(?, ?, ?, ?, ?)", [vin, userid, make, model, year]);
 
 export default {
   getUserVehicles,
