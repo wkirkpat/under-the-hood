@@ -18,6 +18,7 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
         setShowResults(true);
       } else {
         setShowAlert(true);
+        setShowResults(false);
       }
     } catch (e) {
       throw e;
@@ -71,10 +72,10 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
                 <div className="card col-4 shadow">
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item">
-                      Urgency - {maintenanceInfo[0].urgencyLevel}
+                      Urgency - {maintenanceInfo[0].urgencyLevel} out of 3
                     </li>
                     <li className="list-group-item">
-                      Difficulty - {maintenanceInfo[0].difficulty}
+                      Difficulty - {maintenanceInfo[0].difficulty} out of 3
                     </li>
                     <li className="list-group-item">
                       Hours - {maintenanceInfo[0].hours}

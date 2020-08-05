@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Header from "../components/Header";
 
 export default class Profile extends React.Component<
@@ -16,6 +16,7 @@ export default class Profile extends React.Component<
           hasProfile
           hasSearch
         />
+        <p>This is a profile</p>
       </div>
     );
   }

@@ -18,7 +18,7 @@ export default class Maintenance extends React.Component<IMaintenanceProps, IMai
         </div>
         <div className="carInfo">
           <h2 className="user">Will Kirkpatrick</h2>
-          <p className="make">Chevrolet</p>
+          <p className="make"></p>
           <p className="model">Equinox</p>
           <p className="year">2015</p>
         </div>

@@ -67,7 +67,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="subtitle"
               />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home
                 title="title"
                 hasMenu
