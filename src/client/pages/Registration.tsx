@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
+import { Container } from "react-bootstrap";
+
 
 export default class Registration extends React.Component<
   IRegistrationProps,
   IRegistrationState
-> {
+  > {
   render() {
     return (
       <div>
@@ -18,10 +20,13 @@ export default class Registration extends React.Component<
           subtitle="Who's Under the Hood?"
         />
         <div style={{ top: "75%", left: "50%", position: "absolute" }}>
-          <button>
-            <Link to="/profile">Sign Up</Link>
-          </button>
+          <div style={{}} />
+
         </div>
+        
+        <button>
+          <Link to="/profile">Sign Up</Link>
+        </button>
       </div>
     );
   }
