@@ -8,7 +8,7 @@ export default class MenuButton extends React.Component<
 > {
   render() {
     return (
-    <Dropdown>
+    <Dropdown className="m-4">
     <Dropdown.Toggle variant="success" id="dropdown-basic">
    Menu
      </Dropdown.Toggle>
@@ -18,7 +18,7 @@ export default class MenuButton extends React.Component<
             <Link to="/diy">Do It Yourself</Link>
           </Dropdown.Item>
             <Dropdown.Item>
-           <Link to="/symptoms">Symptoms Diagnosis</Link>
+           <Link to="/diagnosis">Symptoms Diagnosis</Link>
           </Dropdown.Item>
           <Dropdown.Item>
           <Link to="/ewl">Engine Warning Light</Link>
