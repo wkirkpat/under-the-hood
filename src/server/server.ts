@@ -1,7 +1,7 @@
 import * as express from "express";
 import routes from "./routes";
 import * as path from "path";
-
+import * as cors from "cors";
 import * as passport from "passport";
 import "./middleware/bearerstrategy";
 import "./middleware/localstrategy";
@@ -9,8 +9,11 @@ import "./middleware/localstrategy";
 
 const app = express();
 
+
+app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
+
 app.use(passport.initialize());
 app.use(routes);
 

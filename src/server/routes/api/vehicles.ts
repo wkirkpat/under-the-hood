@@ -16,7 +16,7 @@ const isUser: express.RequestHandler = (req: any, res, next) => {
 };
 
 //Route for getting a users vehicles based on their user id
-router.get("/info/:id", isUser, async (req, res, next) => {
+router.get("/info/:id", async (req, res, next) => {
   try {
     let vehicles = await DB.Vehicles.getUserVehicles(req.params.id);
     res.json(vehicles);
@@ -94,7 +94,7 @@ router.put("/mileage/:id", async (req, res) => {
 // and getting all the data for that specific car. **
 router.post("/add/:id", async (req, res) => {
   try {
-    res.json(await DB.Vehicles.addNewVehicle(req.body.vin, req.params.id));
+    res.json(await DB.Vehicles.addNewVehicle(req.body.vin, req.params.id, req.body.make, req.body.model, req.body.year));
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

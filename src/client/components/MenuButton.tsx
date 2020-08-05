@@ -21,7 +21,7 @@ export default class MenuButton extends React.Component<
            <Link to="/diagnosis">Symptoms Diagnosis</Link>
           </Dropdown.Item>
           <Dropdown.Item>
-          <Link to="/ewl">Engine Warning Light</Link>
+          <Link to="/ewl">Dashboard Warning Light</Link>
           </Dropdown.Item>
        </Dropdown.Menu>
       </Dropdown>
