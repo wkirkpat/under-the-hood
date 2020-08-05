@@ -6,7 +6,6 @@ import { json } from "../utils/api";
 
 const Profile: React.FC<IProfileProps> = () => {
   const [carInfo, setCarInfo] = useState([]);
-  const [userInfo, setUserInfo] = useState([]);
   const [showAddBar, setShowAddBar] = useState(false);
   const [vin, setVin] = useState("");
 
@@ -31,15 +30,16 @@ const Profile: React.FC<IProfileProps> = () => {
         return res.json();
       })
       .then((data) => {
-        if(data.Results[0].Make) {
-        let newCar = {
-          vin: data.Results[0].VIN,
-          make: data.Results[0].Make,
-          model: data.Results[0].Model,
-          year: data.Results[0].ModelYear,
+        if (data.Results[0].Make) {
+          let newCar = {
+            vin: data.Results[0].VIN,
+            make: data.Results[0].Make,
+            model: data.Results[0].Model,
+            year: data.Results[0].ModelYear,
+          };
+          let result = json("/api/vehicles/add/1", "POST", newCar);
+          getCarInfo();
         }
-        let result = json("/api/vehicles/add/1", "POST", newCar);
-        getCarInfo(); }
       });
   };
 
@@ -70,7 +70,7 @@ const Profile: React.FC<IProfileProps> = () => {
                   className="form-control col-4"
                   id="inputVin"
                   placeholder="Enter VIN..."
-                  onChange={((event) => setVin(event.target.value) )}
+                  onChange={(event) => setVin(event.target.value)}
                 />
               </div>
               <button
@@ -124,15 +124,4 @@ interface IProfileProps extends RouteComponentProps {
   hasMenu: boolean;
   title: string;
 }
-
-// interface carInfo {
-//   Results: any
-// }
-
 export default Profile;
-
-// fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/1GNALDEK9FZ108495?format=json&model`)
-// .then((res) => {
-//   return res.json();
-// })
-// .then((data) => setCarInfo(data));
