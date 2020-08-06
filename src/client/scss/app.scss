@@ -1,6 +1,11 @@
 $theme-colors: (
     'primary': #0091ea //Covalence Blue!  :D
 );
-
+.nextOilChange {
+    margin-right: 2.6rem!important;
+}
+.nextTireMaintenance {
+    margin-right: -3rem!important;
+}
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
