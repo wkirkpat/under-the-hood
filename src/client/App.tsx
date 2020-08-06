@@ -67,7 +67,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="subtitle"
               />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/home">
               <Home
                 title="title"
                 hasMenu
@@ -107,7 +107,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="subtitle"
               />
             </Route>
-            {/* <Route path="/">
+            <Route path="/">
               <Landing
                 title="title"
                 hasMenu
@@ -116,7 +116,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 hasSearch
                 subtitle="subtitle"
               />
-            </Route>  This is commented out for now so we can speed things along a little bit, we can try to make a separate landing and home page if we have time later */} 
+            </Route>
           </Switch>
         </div>
       </Router>

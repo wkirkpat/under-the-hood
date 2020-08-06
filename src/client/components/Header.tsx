@@ -24,29 +24,26 @@ export default class Header extends React.Component<
             justifyContent: "space-between",
           }}
         >
-          {this.props.hasMenu || this.props.hasProfile ? (
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              {this.props.hasMenu ? <MenuButton /> : null}
-              {this.props.hasProfile ? (
-                <Link to="/profile">
-                  <div
-                    style={{
-                      display: "block",
-                      height: "50px",
-                      width: "50px",
-                      backgroundColor: "#a3a3a3",
-                    }}
-                    className="mt-3"
-                  />
-                  <span>{this.state.userInfo.name}</span>
-                </Link>
-              ) : null}
-            </div>
-          ) : (
-            <div />
-          )}
+        {this.props.hasMenu ? <MenuButton /> : null}
           <h3 className="mt-4">{this.props.title}</h3>
-          {this.props.hasSearch ? (
+          {this.props.hasSearch && this.props.hasProfile ?
+          <div style={{display:"flex", flexDirection:"row", marginRight:"15px", alignItems:"center"}}>
+            <input className="h-25 m-4" placeholder="Search..." />
+            <Link to="/profile">
+              <div
+                style={{
+                  display: "block",
+                  height: "50px",
+                  width: "50px",
+                  backgroundColor: "#a3a3a3",
+                }}
+                className="mt-3"
+              />
+              <span>{this.state.userInfo.name}</span>
+            </Link>
+            </div>
+            :
+          this.props.hasSearch ? (
             <input className="h-25 m-4" placeholder="Search..." />
           ) : null}
           {this.props.hasLogin ? (
