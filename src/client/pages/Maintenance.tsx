@@ -1,22 +1,21 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Header from "../components/Header";
-import { TextField } from "@material-ui/core";
 import { json } from "../utils/api";
 import moment, { months } from "moment";
 import { RouteComponentProps } from "react-router-dom";
+import "../scss/app"
 
 const Maintance: React.FC<IMaintenanceProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
 
-
   const handleUpdate = (e: any) => {
     let data = {
       column: e.target.id,
-      value: e.target.value
-    }
+      value: e.target.value,
+    };
     let result = json("/api/vehicles/update/1", "PUT", data);
     getCarInfo();
-  }
+  };
 
   const firstUpdate = useRef(true);
   useLayoutEffect(() => {
@@ -25,7 +24,6 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       return;
     }
   });
-
 
   useEffect(() => {
     getCarInfo();
@@ -51,6 +49,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           hasSearch
         />
       </div>
+      <div className="container d-flex border rounded justify-content-between">
       <div className="carInformation">
         <h2 className="user">Will Kirkpatrick</h2>
         <p className="make">{carInfo[0]?.make}</p>
@@ -62,201 +61,246 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         height="200px"
         width="350px"
       ></img>
-      <div className="previousOilChange mt-2">
-        <h2 className="card-title">Previous Oil Change:</h2>
-        <p className="card-text">Oil Type:{carInfo[0]?.oilType}</p>
-        <p className="card-text">Oil Filter:</p>
-        <p className="card-text">Date:</p>
-        <TextField
-          id="lastOilChange"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue= {carInfo[0]?.lastOilChange} 
-          className="container"
-          onChange={handleUpdate(event)}
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
       </div>
-      <div className="nextOilChange mt-2">
-        <h2 className="card-title">Next Oil Change:</h2>
-        <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
-        <p className="card-text">Oil Filter:</p>
-        <p className="card-text">Date: {moment(carInfo[0]?.lastOilChange).add(6, 'months').calendar()}</p>
-        
+      <div className="container d-flex border rounded justify-content-between">
+        <div className="previousOilChange mt-2 mr-4">
+          <h2 className="card-title">Previous Oil Change: </h2>
+          <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
+          <p className="card-text">Oil Filter:</p>
+          <p className="card-text">
+            Date:{" "}
+            {moment(carInfo[0]?.lastOilChange).format(
+              "MM/DD/YYYY"
+            )}
+          </p>
+          <div className="form-group row">
+            <label htmlFor="lastOilChange" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="lastOilChange"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="nextOilChange mt-2 ">
+          <h2 className="card-title">Next Oil Change:</h2>
+          <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
+          <p className="card-text">Oil Filter:</p>
+          <p className="card-text">
+            Date:{" "}
+            {moment(carInfo[0]?.lastOilChange).add(6, "months").calendar()}
+          </p>
+        </div>
       </div>
+      <div className="container d-flex border rounded justify-content-between">
       <div className="previousBrakeChange">
         <h2 className="card-title">Previous Brake Change:</h2>
         <p className="card-text">
-          Brake Pads Front:{carInfo[0]?.brakePadsFront}
+          Brake Pads Front:
         </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p> Date:{carInfo[0]?.brakePadsFront} </p>
+        <div className="form-group row">
+            <label htmlFor="brakePadsFront" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakePadsFront"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Brake Pads Rear:</p>
+        <p> Date:{carInfo[0]?.brakePadsRear} </p>
+        <div className="form-group row">
+            <label htmlFor="brakePadsRear" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakePadsRear"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
         <p className="card-text">
-          Brake Pads Rear:{carInfo[0]?.brakePadRear}
+          Brake Routers Front:
         </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p> Date:{carInfo[0]?.brakeRouterFront} </p>
+        <div className="form-group row">
+            <label htmlFor="brakeRouterFront" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeRouterFront"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
         <p className="card-text">
-          Brake Routers Front:{carInfo[0]?.brakeRouterFront}
+          Brake Routers Rear:
         </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Brake Routers Rear:{carInfo[0]?.brakeRouterRear}
-        </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Brake Calipers:{carInfo[0]?.BrakeCalipers}
-        </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Brake Drums:{carInfo[0]?.brakeDrum}
-        </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Brake Hoses:{carInfo[0]?.brakeHoses}
-        </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Brake Line:{carInfo[0]?.brakeLines}
-        </p>
+        <p> Date: {carInfo[0]?.brakeRouterRear}</p>
+        <div className="form-group row">
+            <label htmlFor="brakeRouterRear" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeRouterRear"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Brake Calipers:</p>
+        <p> Date:{carInfo[0]?.brakeCalipers} </p>
+        <div className="form-group row">
+            <label htmlFor="brakeCalipers" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeCalipers"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Brake Drums:</p>
+        <p> Date:{carInfo[0]?.brakeDrum} </p>
+        <div className="form-group row">
+            <label htmlFor="brakeDrums" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeDrums"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Brake Hoses:</p>
+        <p> Date:{carInfo[0]?.brakeHoses} </p>
+        <div className="form-group row">
+            <label htmlFor="brakeHoses" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeHoses"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Brake Line:</p>
+        <p> Date:{carInfo[0]?.brakeLines} </p>
+        <div className="form-group row">
+            <label htmlFor="brakeHoses" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="brakeHoses"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title">Next Brake Change:</h2>
-        <p className="card-text">Brake Pads Front:{moment(carInfo[0]?.brakePadsFront).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Pads Rear:{moment(carInfo[0]?.brakePadsRear).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Routers Front:{moment(carInfo[0]?.brakeRouterFront).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Routers Rear:{moment(carInfo[0]?.brakeRouterRear).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Calipers:{moment(carInfo[0]?.BrakeCalipers).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Drums:{moment(carInfo[0]?.brakeDrums).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Hoses:{moment(carInfo[0]?.brakeHoses).add(6, 'months').calendar()}</p>
-        <p className="card-text">Brake Line:{moment(carInfo[0]?.brakeLines).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Pads Front:</p>
+        <p>Date: {moment(carInfo[0]?.brakePadsFront).add(6, "months").calendar()} </p>
+        <p className="card-text">Brake Pads Rear:</p>
+        <p>Date: {moment(carInfo[0]?.brakePadsRear).add(6, "months").calendar()} </p>
+        <p className="card-text">Brake Routers Front:</p>
+        <p>Date: {moment(carInfo[0]?.brakeRouterFront).add(12, "months").calendar()} </p>
+        <p className="card-text">Brake Routers Rear:</p>
+        <p>Date: {moment(carInfo[0]?.brakeRouterRear).add(12, "months").calendar()} </p>
+        <p className="card-text">Brake Calipers:</p>
+        <p>Date: {moment(carInfo[0]?.brakeCalipers).add(12, "months").calendar()} </p>
+        <p className="card-text">Brake Drums:</p>
+        <p>Date: {moment(carInfo[0]?.brakeDrum).add(18, "months").calendar()} </p>
+        <p className="card-text">Brake Hoses:</p>
+        <p>Date: {moment(carInfo[0]?.brakeHose).add(24, "months").calendar()} </p>
+        <p className="card-text">Brake Line:</p>
+        <p>Date: {moment(carInfo[0]?.brakeLines).add(24, "months").calendar()} </p>
       </div>
+      </div>
+      <div className="container d-flex border rounded justify-content-between">
       <div className="previousBatterySwap">
         <h2 className="card-title">Previous Battery Swap:</h2>
-        <p className="card-text">
-          Battery Size:{carInfo[0]?.batterySize}
-        </p>
-        <p className="card-text">Cold Cranking Amps:</p>
+        <p className="card-text">Battery Size:{carInfo[0]?.batterySize}</p>
         <p className="card-text">Date:{carInfo[0]?.batterySwap}</p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <div className="form-group row">
+            <label htmlFor="batterySwap" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="batterySwap"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
       </div>
       <div className="nextBatterySwap">
         <h2 className="card-title">Next Battery Swap:</h2>
         <p className="card-text">Battery Size:</p>
-        <p className="card-text">Cold Cranking Amps:</p>
-        <p className="card-text">Date:{moment(carInfo[0]?.batterySwap).add(6, 'months').calendar()}</p>
+        <p className="card-text">Date: {moment(carInfo[0]?.batterySwap).add(48, "months").calendar()} </p>
       </div>
+      </div>
+      <div className="container d-flex border rounded justify-content-between">
       <div className="previousTireMaintenance">
         <h2 className="card-title">Previous Tire Maintenance</h2>
-        <p className="card-text">
-          Tires Rotated:{carInfo[0]?.tireRotation}
-        </p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Tires Swapped:</p>
-        <TextField
-          id="datetime-local"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">
-          Tires Size:{carInfo[0]?.tireSize}
-        </p>
+        <p className="card-text">Tires Rotated:{carInfo[0]?.tireRotation}</p>
+        <div className="form-group row">
+            <label htmlFor="tireRotation" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="tireRotation"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        <p className="card-text">Tires Size:{carInfo[0]?.tireSize}</p>
         <p className="card-text">
           Tires Air Pressure:{carInfo[0]?.tirePressure}
         </p>
       </div>
       <div className="nextTireMaintenance">
         <h2 className="card-title">Next Tire Maintenance</h2>
-        <p className="card-text">Tires Rotated:{moment(carInfo[0]?.tireRotation).add(6, 'months').calendar()}</p>
-        <p className="card-text">Tires Swapped:{}</p>
-        <p className="card-text">Tires Size:</p>
-        <p className="card-text">Tires Air Pressure:</p>
+        <p className="card-text">Tires Rotated:</p>
+        <p> Date:  {moment(carInfo[0]?.tireRotation).add(12, "months").calendar()}  </p>
+        <p className="card-text">Tires Size: {carInfo[0]?.tireSize} </p>
+        <p className="card-text">Tires Air Pressure: {carInfo[0]?.tirePressure} </p>
+      </div>
       </div>
     </>
   );
