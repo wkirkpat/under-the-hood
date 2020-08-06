@@ -107,7 +107,7 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="subtitle"
               />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Landing
                 title="title"
                 hasMenu
