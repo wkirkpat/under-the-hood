@@ -15,6 +15,9 @@ export default class MenuButton extends React.Component<
      </Dropdown.Toggle>
       
        <Dropdown.Menu>
+         <Dropdown.Item>
+           <Link to="/home">Home</Link>
+         </Dropdown.Item>
           <Dropdown.Item>
             <Link to="/diy">Do It Yourself</Link>
           </Dropdown.Item>

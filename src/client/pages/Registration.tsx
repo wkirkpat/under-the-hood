@@ -23,7 +23,10 @@ export default class Registration extends React.Component<
           <div style={{}} />
 
         </div>
+
+   
         
+
         <button>
           <Link to="/profile">Sign Up</Link>
         </button>

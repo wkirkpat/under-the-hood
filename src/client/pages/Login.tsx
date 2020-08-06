@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
-import {RouteComponentProps} from "react-router"
+import {RouteComponentProps} from "react-router";
 
-import { Button, FormGroup, FormControl } from "react-bootstrap";
+
+
+import { Button, FormGroup, FormControl, Container } from "react-bootstrap";
 
 
 const Login: React.FC<ILoginProps> = () => {
@@ -22,6 +24,7 @@ const Login: React.FC<ILoginProps> = () => {
 
   return (
     <div>
+      <div style={{  }}>
       <Header
         hasMenu={false}
         hasProfile={false}
@@ -30,17 +33,22 @@ const Login: React.FC<ILoginProps> = () => {
         title="Under the Hood"
         subtitle="Who's Under the Hood"
       />
-      <div style={{ top: "75%", left: "50%", position: "absolute" }}>
+  </div>
 
 
-
-<div style={{bottom: "25%", position: "absolute"}}>
+  { <React.Fragment>
+<div className="container d-flex justify-content-center mx-auto align-middle" style={{
+        flexDirection:"column",
+        width:"300px",
+       height:"800px"
+       }}>
         <div className="Login">
           <form onSubmit={handleSubmit}>
             <FormGroup controlId="email">
               <label>Email</label>
               <FormControl
-                autoFocus
+              
+               
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -49,13 +57,14 @@ const Login: React.FC<ILoginProps> = () => {
             <FormGroup controlId="password">
               <label>Password</label>
               <FormControl
+             
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 type="password"
               />
             </FormGroup>
 
-            
+           
 
             <button>
               <Link to="/home" >Sign In</Link>
@@ -63,8 +72,9 @@ const Login: React.FC<ILoginProps> = () => {
           </form>
           </div>
         </div>
+       </React.Fragment>
+      }
       </div>
-    </div>
   );
 }
 

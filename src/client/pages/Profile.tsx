@@ -8,6 +8,7 @@ const Profile: React.FC<IProfileProps> = () => {
   const [carInfo, setCarInfo] = useState([]);
   const [showAddBar, setShowAddBar] = useState(false);
   const [vin, setVin] = useState("");
+  const [mileage, setMileage] = useState("");
 
   const getCarInfo = async () => {
     try {
@@ -41,6 +42,18 @@ const Profile: React.FC<IProfileProps> = () => {
           getCarInfo();
         }
       });
+  };
+
+  const handleMileage = (id: string) => {
+    let newMileage = parseInt(mileage);
+    let data = {
+      mileage: newMileage,
+    };
+    try {
+      let results = json(`/api/vehicles/mileage/${id}`, "PUT", data);
+    } catch (e) {
+      throw e;
+    }
   };
 
   useEffect(() => {
@@ -95,7 +108,25 @@ const Profile: React.FC<IProfileProps> = () => {
                 <li className="list-group-item">Make: {info.make} </li>
                 <li className="list-group-item">Model: {info.model} </li>
                 <li className="list-group-item">Year: {info._year} </li>
-                <li className="list-group-item">Mileage: {info.mileage} </li>
+                <li className="list-group-item">
+                  <div className="form-group">
+                    <label htmlFor="exampleFormControlInput1">Mileage</label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder={info.mileage}
+                      onChange={(event) => {
+                        setMileage(event.target.value);
+                      }}
+                    />
+                    <button
+                      onClick={() => handleMileage(info.id)}
+                      className="badge badge-secondary mt-1"
+                    >
+                      Update
+                    </button>
+                  </div>
+                </li>
                 <Link to={`/maintenance/${info.vin}`}>
                   <li className="list-group-item">Maintenance</li>
                 </Link>
