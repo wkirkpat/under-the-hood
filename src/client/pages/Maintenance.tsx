@@ -229,21 +229,21 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title">Next Brake Change:</h2>
-        <p className="card-text">Brake Pads Front:</p>
+        <p className="card-text mt-5">Brake Pads Front:</p>
         <p>Date: {moment(carInfo[0]?.brakePadsFront).add(6, "months").calendar()} </p>
-        <p className="card-text">Brake Pads Rear:</p>
+        <p className="card-text mt-5">Brake Pads Rear:</p>
         <p>Date: {moment(carInfo[0]?.brakePadsRear).add(6, "months").calendar()} </p>
-        <p className="card-text">Brake Routers Front:</p>
+        <p className="card-text mt-5">Brake Routers Front:</p>
         <p>Date: {moment(carInfo[0]?.brakeRouterFront).add(12, "months").calendar()} </p>
-        <p className="card-text">Brake Routers Rear:</p>
+        <p className="card-text mt-5">Brake Routers Rear:</p>
         <p>Date: {moment(carInfo[0]?.brakeRouterRear).add(12, "months").calendar()} </p>
-        <p className="card-text">Brake Calipers:</p>
+        <p className="card-text mt-5">Brake Calipers:</p>
         <p>Date: {moment(carInfo[0]?.brakeCalipers).add(12, "months").calendar()} </p>
-        <p className="card-text">Brake Drums:</p>
+        <p className="card-text mt-5">Brake Drums:</p>
         <p>Date: {moment(carInfo[0]?.brakeDrum).add(18, "months").calendar()} </p>
-        <p className="card-text">Brake Hoses:</p>
+        <p className="card-text mt-5">Brake Hoses:</p>
         <p>Date: {moment(carInfo[0]?.brakeHose).add(24, "months").calendar()} </p>
-        <p className="card-text">Brake Line:</p>
+        <p className="card-text mt-5">Brake Line:</p>
         <p>Date: {moment(carInfo[0]?.brakeLines).add(24, "months").calendar()} </p>
       </div>
       </div>
@@ -295,7 +295,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         </p>
       </div>
       <div className="nextTireMaintenance">
-        <h2 className="card-title">Next Tire Maintenance</h2>
+        <h2 className="card-title pr-5">Next Tire Maintenance</h2>
         <p className="card-text">Tires Rotated:</p>
         <p> Date:  {moment(carInfo[0]?.tireRotation).add(12, "months").calendar()}  </p>
         <p className="card-text">Tires Size: {carInfo[0]?.tireSize} </p>

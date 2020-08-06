@@ -23,6 +23,7 @@ export default class Header extends React.Component<
             flexDirection: "row",
             justifyContent: "space-between",
           }}
+          className="ml-2"
         >
         {this.props.hasMenu ? <MenuButton /> : null}
           <h3 className="mt-4">{this.props.title}</h3>

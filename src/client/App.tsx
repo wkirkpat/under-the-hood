@@ -10,6 +10,7 @@ import EWL from "./pages/EWL";
 import Maintenance from "./pages/Maintenance";
 import Symptoms from "./pages/Symptoms";
 import Profile from "./pages/Profile";
+import { RouteComponentProps, withRouter } from 'react-router';  
 
 class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
