@@ -56,9 +56,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <h2 className="card-title">Previous Oil Change:</h2>
         <p className="card-text">Oil Type:{carInfo[0]?.oilType}</p>
         <p className="card-text">Oil Filter:</p>
-        <p className="card-text">
-          Date:{carInfo[0] && carInfo[0].lastOilChange}
-        </p>
+        <p className="card-text">Date:</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -75,16 +73,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
         <p className="card-text">Oil Filter:</p>
         <p className="card-text">Date: {moment(carInfo[0]?.lastOilChange).add(6, 'months').calendar()}</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        
       </div>
       <div className="previousBrakeChange">
         <h2 className="card-title">Previous Brake Change:</h2>
@@ -185,94 +174,14 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title">Next Brake Change:</h2>
-        <p className="card-text">Brake Pads Front:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Pads Rear:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Routers Front:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Routers Rear:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Calipers:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Drums:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Hoses:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Brake Line:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p className="card-text">Brake Pads Front:{moment(carInfo[0]?.brakePadsFront).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Pads Rear:{moment(carInfo[0]?.brakePadsRear).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Routers Front:{moment(carInfo[0]?.brakeRouterFront).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Routers Rear:{moment(carInfo[0]?.brakeRouterRear).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Calipers:{moment(carInfo[0]?.BrakeCalipers).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Drums:{moment(carInfo[0]?.brakeDrums).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Hoses:{moment(carInfo[0]?.brakeHoses).add(6, 'months').calendar()}</p>
+        <p className="card-text">Brake Line:{moment(carInfo[0]?.brakeLines).add(6, 'months').calendar()}</p>
       </div>
       <div className="previousBatterySwap">
         <h2 className="card-title">Previous Battery Swap:</h2>
@@ -296,17 +205,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <h2 className="card-title">Next Battery Swap:</h2>
         <p className="card-text">Battery Size:</p>
         <p className="card-text">Cold Cranking Amps:</p>
-        <p className="card-text">Date:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p className="card-text">Date:{moment(carInfo[0]?.batterySwap).add(6, 'months').calendar()}</p>
       </div>
       <div className="previousTireMaintenance">
         <h2 className="card-title">Previous Tire Maintenance</h2>
@@ -343,28 +242,8 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="nextTireMaintenance">
         <h2 className="card-title">Next Tire Maintenance</h2>
-        <p className="card-text">Tires Rotated:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <p className="card-text">Tires Swapped:</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p className="card-text">Tires Rotated:{moment(carInfo[0]?.tireRotation).add(6, 'months').calendar()}</p>
+        <p className="card-text">Tires Swapped:{}</p>
         <p className="card-text">Tires Size:</p>
         <p className="card-text">Tires Air Pressure:</p>
       </div>
