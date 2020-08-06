@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
-import {RouteComponentProps} from "react-router"
+import {RouteComponentProps} from "react-router";
 
-import { Button, FormGroup, FormControl } from "react-bootstrap";
+
+import { Button, FormGroup, FormControl, Container } from "react-bootstrap";
 
 
 const Login: React.FC<ILoginProps> = () => {
@@ -33,8 +34,10 @@ const Login: React.FC<ILoginProps> = () => {
       <div style={{ top: "75%", left: "50%", position: "absolute" }}>
 
 
-
-<div style={{bottom: "25%", position: "absolute"}}>
+<Container className="themed-container">
+<div style={{ display: "flex",
+    justifyContent: "center",
+    alignItems: "center", width:"18em"}}>
         <div className="Login">
           <form onSubmit={handleSubmit}>
             <FormGroup controlId="email">
@@ -55,7 +58,7 @@ const Login: React.FC<ILoginProps> = () => {
               />
             </FormGroup>
 
-            
+           
 
             <button>
               <Link to="/" >Sign In</Link>
@@ -63,6 +66,7 @@ const Login: React.FC<ILoginProps> = () => {
           </form>
           </div>
         </div>
+       </Container>  
       </div>
     </div>
   );
