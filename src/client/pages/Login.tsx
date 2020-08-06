@@ -1,30 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
+import {RouteComponentProps} from "react-router"
 
-export default class Login extends React.Component<ILoginProps, ILoginState> {
-  render() {
-    return (
-      <div>
-        <Header
-          hasMenu={false}
-          hasProfile={false}
-          hasSearch={false}
-          hasLogin={false}
-          title="Under the Hood"
-          subtitle="Who's Under the Hood"
-        />
-        <div style={{ top: "75%", left: "50%", position: "absolute" }}>
-          <button>
-            <Link to="/home">Sign In</Link>
-          </button>
+import { Button, FormGroup, FormControl } from "react-bootstrap";
+
+
+const Login: React.FC<ILoginProps> = () => {
+
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(event:any) {
+    event.preventDefault();
+  }
+
+  return (
+    <div>
+      <Header
+        hasMenu={false}
+        hasProfile={false}
+        hasSearch={false}
+        hasLogin={false}
+        title="Under the Hood"
+        subtitle="Who's Under the Hood"
+      />
+      <div style={{ top: "75%", left: "50%", position: "absolute" }}>
+
+
+
+<div style={{bottom: "25%", position: "absolute"}}>
+        <div className="Login">
+          <form onSubmit={handleSubmit}>
+            <FormGroup controlId="email">
+              <label>Email</label>
+              <FormControl
+                autoFocus
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+            </FormGroup>
+            <FormGroup controlId="password">
+              <label>Password</label>
+              <FormControl
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                type="password"
+              />
+            </FormGroup>
+
+            
+
+            <button>
+              <Link to="/home" >Sign In</Link>
+            </button>
+          </form>
+          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-interface ILoginProps {
+
+interface ILoginProps extends RouteComponentProps {
   subtitle: string;
   hasSearch: boolean;
   hasLogin: boolean;
@@ -33,8 +78,4 @@ interface ILoginProps {
   title: string;
 }
 
-interface ILoginState {
-  userInfo: {
-    name: string;
-  };
-}
+export default Login 

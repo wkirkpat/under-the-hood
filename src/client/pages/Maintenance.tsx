@@ -3,10 +3,20 @@ import Header from "../components/Header";
 import { TextField } from "@material-ui/core";
 import { json } from "../utils/api";
 import moment, { months } from "moment";
+import { RouteComponentProps } from "react-router-dom";
 
 const Maintance: React.FC<IMaintenanceProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
-  // const [nextOilChange, setNextOilChange] = useState("");
+
+
+  const handleUpdate = (e: any) => {
+    let data = {
+      column: e.target.id,
+      value: e.target.value
+    }
+    let result = json("/api/vehicles/update/1", "PUT", data);
+    getCarInfo();
+  }
 
   const firstUpdate = useRef(true);
   useLayoutEffect(() => {
@@ -14,8 +24,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       firstUpdate.current = false;
       return;
     }
-    // setNextOilChange(moment(carInfo[0].lastOilChange).add(6, 'months').calendar());
   });
+
+
   useEffect(() => {
     getCarInfo();
   }, []);
@@ -23,7 +34,6 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
     try {
       let info = await json(`/api/vehicles/info/1`);
       setCarInfo(info);
-      // console.log(info);
     } catch (e) {
       throw e;
     }
@@ -58,11 +68,12 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">Oil Filter:</p>
         <p className="card-text">Date:</p>
         <TextField
-          id="datetime-local"
+          id="lastOilChange"
           label="Previous appointment"
           type="datetime-local"
           defaultValue= {carInfo[0]?.lastOilChange} 
           className="container"
+          onChange={handleUpdate(event)}
           InputLabelProps={{
             shrink: true,
           }}
@@ -251,7 +262,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
   );
 };
 
-interface IMaintenanceProps {
+interface IMaintenanceProps extends RouteComponentProps {
   subtitle: string;
   hasSearch: boolean;
   hasLogin: boolean;
