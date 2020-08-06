@@ -1,0 +1,35 @@
+ <div className="container d-flex border rounded justify-content-between">
+        <div className="previousOilChange mt-2 mx-5">
+          <h2 className="card-title">Previous Oil Change: </h2>
+          <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
+          <p className="card-text">Oil Filter:</p>
+          <p className="card-text">
+            Date:{" "}
+            {moment(carInfo[0] && carInfo[0].lastOilChange).format(
+              "MM/DD/YYYY"
+            )}
+          </p>
+          <div className="form-group row">
+            <label htmlFor="lastOilChange" className="col-form-label ml-3 mr-1">
+              Date:
+            </label>
+            <div className="">
+              <input
+                className="form-control"
+                type="date"
+                id="lastOilChange"
+                onChange={handleUpdate}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="nextOilChange mt-2 ml-5">
+          <h2 className="card-title">Next Oil Change:</h2>
+          <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
+          <p className="card-text">Oil Filter:</p>
+          <p className="card-text">
+            Date:{" "}
+            {moment(carInfo[0]?.lastOilChange).add(6, "months").calendar()}
+          </p>
+        </div>
+      </div>
