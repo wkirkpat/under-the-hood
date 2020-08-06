@@ -1,6 +1,7 @@
 $theme-colors: (
     'primary': #0091ea //Covalence Blue!  :D
 );
+
 .nextOilChange {
     margin-right: 2.6rem!important;
 }
@@ -9,3 +10,5 @@ $theme-colors: (
 }
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.dropdown-toggle:after { content: none }

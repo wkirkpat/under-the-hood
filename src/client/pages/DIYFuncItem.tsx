@@ -15,21 +15,21 @@ export default function DIYFuncItem() {
 
     switch (diyID) {
         case 'tire':
-            return <Tire />
+            return <Tire/>;
         case 'battery':
-            return <Battery />
+            return <Battery />;
         case 'fluids':
-            return <Fluids />
+            return <Fluids />;
         case 'lights':
-            return <Lights />
+            return <Lights />;
         case 'oilandfilter':
-            return <OilAndFilter />
+            return <OilAndFilter />;
         case 'shocksandstruts':
-            return <ShocksAndStruts />
+            return <ShocksAndStruts />;
         case 'sparkplugs':
-            return <SparkPlugs />
+            return <SparkPlugs />;
         case 'waxing':
-            return <Waxing />
+            return <Waxing />;
         case 'windshieldwipers':
             return <WindshieldWipers />
     }

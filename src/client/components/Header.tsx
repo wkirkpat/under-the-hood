@@ -5,7 +5,7 @@ import MenuButton from "./MenuButton";
 export default class Header extends React.Component<
   IHeaderProps,
   IHeaderState
-> {
+  > {
   constructor(props: IHeaderProps) {
     super(props);
     this.state = {
@@ -25,28 +25,21 @@ export default class Header extends React.Component<
           }}
           className="ml-2"
         >
-        {this.props.hasMenu ? <MenuButton /> : null}
+          {this.props.hasMenu ? <MenuButton /> : null}
           <h3 className="mt-4">{this.props.title}</h3>
-          {this.props.hasSearch && this.props.hasProfile ?
-          <div style={{display:"flex", flexDirection:"row", marginRight:"15px", alignItems:"center"}}>
-            <input className="h-25 m-4" placeholder="Search..." />
-            <Link to="/profile">
+          {this.props.hasProfile ?
+            <Link to="/profile" style={{margin:"0 20px", textAlign:"center"}}>
               <div
                 style={{
                   display: "block",
                   height: "50px",
                   width: "50px",
-                  backgroundColor: "#a3a3a3",
+                  backgroundColor: "#a3a3a3"
                 }}
                 className="mt-3"
               />
               <span>{this.state.userInfo.name}</span>
-            </Link>
-            </div>
-            :
-          this.props.hasSearch ? (
-            <input className="h-25 m-4" placeholder="Search..." />
-          ) : null}
+            </Link> : null}
           {this.props.hasLogin ? (
             <div className="mt-3 mr-3">
               <button className="btn btn-primary btn-sm border border-dark mr-2">
