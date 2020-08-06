@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import {RouteComponentProps} from "react-router";
 
 
+
 import { Button, FormGroup, FormControl, Container } from "react-bootstrap";
 
 
@@ -23,6 +24,7 @@ const Login: React.FC<ILoginProps> = () => {
 
   return (
     <div>
+      <div style={{  }}>
       <Header
         hasMenu={false}
         hasProfile={false}
@@ -31,19 +33,22 @@ const Login: React.FC<ILoginProps> = () => {
         title="Under the Hood"
         subtitle="Who's Under the Hood"
       />
-      <div style={{ top: "75%", left: "50%", position: "absolute" }}>
+  </div>
 
 
-<Container className="themed-container">
-<div style={{ display: "flex",
-    justifyContent: "center",
-    alignItems: "center", width:"18em"}}>
+  { <React.Fragment>
+<div className="container d-flex justify-content-center mx-auto align-middle" style={{
+        flexDirection:"column",
+        width:"300px",
+       height:"800px"
+       }}>
         <div className="Login">
           <form onSubmit={handleSubmit}>
             <FormGroup controlId="email">
               <label>Email</label>
               <FormControl
-                autoFocus
+              
+               
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -52,6 +57,7 @@ const Login: React.FC<ILoginProps> = () => {
             <FormGroup controlId="password">
               <label>Password</label>
               <FormControl
+             
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 type="password"
@@ -66,9 +72,9 @@ const Login: React.FC<ILoginProps> = () => {
           </form>
           </div>
         </div>
-       </Container>  
+       </React.Fragment>
+      }
       </div>
-    </div>
   );
 }
 
