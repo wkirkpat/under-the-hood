@@ -10,7 +10,7 @@ export default class MenuButton extends React.Component<
     return (
     <Dropdown className="m-4">
     <Dropdown.Toggle variant="success" id="dropdown-basic">
-   Menu
+   <img style={{width:"30px"}} src="images/menu.png"/>
      </Dropdown.Toggle>
       
        <Dropdown.Menu>

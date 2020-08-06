@@ -58,7 +58,7 @@ const Login: React.FC<ILoginProps> = () => {
             
 
             <button>
-              <Link to="/" >Sign In</Link>
+              <Link to="/home" >Sign In</Link>
             </button>
           </form>
           </div>
