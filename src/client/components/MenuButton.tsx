@@ -8,8 +8,9 @@ export default class MenuButton extends React.Component<
 > {
   render() {
     return (
-    <Dropdown className="m-4">
-    <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <>
+      <Dropdown className="m-4">
+    <Dropdown.Toggle variant="secondary" id="dropdown-basic">
    <img style={{width:"30px"}} src="images/menu.png"/>
      </Dropdown.Toggle>
       
@@ -25,6 +26,7 @@ export default class MenuButton extends React.Component<
           </Dropdown.Item>
        </Dropdown.Menu>
       </Dropdown>
+      </>
     );
   }
 }

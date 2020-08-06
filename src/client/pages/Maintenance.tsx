@@ -8,15 +8,14 @@ import { RouteComponentProps } from "react-router-dom";
 const Maintance: React.FC<IMaintenanceProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
 
-
   const handleUpdate = (e: any) => {
     let data = {
       column: e.target.id,
-      value: e.target.value
-    }
+      value: e.target.value,
+    };
     let result = json("/api/vehicles/update/1", "PUT", data);
     getCarInfo();
-  }
+  };
 
   const firstUpdate = useRef(true);
   useLayoutEffect(() => {
@@ -25,7 +24,6 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       return;
     }
   });
-
 
   useEffect(() => {
     getCarInfo();
@@ -62,40 +60,36 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         height="200px"
         width="350px"
       ></img>
-      <div className="previousOilChange mt-2">
-        <h2 className="card-title">Previous Oil Change:</h2>
-        <p className="card-text">Oil Type:{carInfo[0]?.oilType}</p>
+      <div className="container d-flex">
+      <div className="previousOilChange mt-2 mx-5">
+        <h2 className="card-title">Previous Oil Change: </h2>
+        <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
         <p className="card-text">Oil Filter:</p>
         <p className="card-text">
-          Date:{carInfo[0] && carInfo[0].lastOilChange}
+          Date: {moment(carInfo[0] && carInfo[0].lastOilChange).format('MM/DD/YYYY')}
         </p>
-        <TextField
-          id="lastOilChange"
-          label="Previous appointment"
-          type="datetime-local"
-          defaultValue= {carInfo[0]?.lastOilChange} 
-          className="container"
-          onChange={handleUpdate(event)}
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <div className="form-group row">
+          <label htmlFor="example-date-input" className="col-form-label">
+            Date:
+          </label>
+          <div className="col-3">
+            <input
+              className="form-control"
+              type="date"
+              id="lastOilChange"
+              onChange={handleUpdate}
+            />
+          </div>
+        </div>
       </div>
-      <div className="nextOilChange mt-2">
+      <div className="nextOilChange mt-2 ml-5">
         <h2 className="card-title">Next Oil Change:</h2>
         <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
         <p className="card-text">Oil Filter:</p>
-        <p className="card-text">Date: {moment(carInfo[0]?.lastOilChange).add(6, 'months').calendar()}</p>
-        <TextField
-          id="datetime-local"
-          label="Next appointment"
-          type="datetime-local"
-          defaultValue="2017-05-24T10:30"
-          className="container"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+        <p className="card-text">
+          Date: {moment(carInfo[0]?.lastOilChange).add(6, "months").calendar()}
+        </p>
+      </div>
       </div>
       <div className="previousBrakeChange">
         <h2 className="card-title">Previous Brake Change:</h2>
@@ -112,9 +106,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Brake Pads Rear:{carInfo[0]?.brakePadRear}
-        </p>
+        <p className="card-text">Brake Pads Rear:{carInfo[0]?.brakePadRear}</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -151,9 +143,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Brake Calipers:{carInfo[0]?.BrakeCalipers}
-        </p>
+        <p className="card-text">Brake Calipers:{carInfo[0]?.BrakeCalipers}</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -164,9 +154,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Brake Drums:{carInfo[0]?.brakeDrum}
-        </p>
+        <p className="card-text">Brake Drums:{carInfo[0]?.brakeDrum}</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -177,9 +165,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Brake Hoses:{carInfo[0]?.brakeHoses}
-        </p>
+        <p className="card-text">Brake Hoses:{carInfo[0]?.brakeHoses}</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -190,9 +176,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Brake Line:{carInfo[0]?.brakeLines}
-        </p>
+        <p className="card-text">Brake Line:{carInfo[0]?.brakeLines}</p>
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title">Next Brake Change:</h2>
@@ -287,9 +271,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="previousBatterySwap">
         <h2 className="card-title">Previous Battery Swap:</h2>
-        <p className="card-text">
-          Battery Size:{carInfo[0]?.batterySize}
-        </p>
+        <p className="card-text">Battery Size:{carInfo[0]?.batterySize}</p>
         <p className="card-text">Cold Cranking Amps:</p>
         <p className="card-text">Date:{carInfo[0]?.batterySwap}</p>
         <TextField
@@ -321,9 +303,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="previousTireMaintenance">
         <h2 className="card-title">Previous Tire Maintenance</h2>
-        <p className="card-text">
-          Tires Rotated:{carInfo[0]?.tireRotation}
-        </p>
+        <p className="card-text">Tires Rotated:{carInfo[0]?.tireRotation}</p>
         <TextField
           id="datetime-local"
           label="Previous appointment"
@@ -345,9 +325,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             shrink: true,
           }}
         />
-        <p className="card-text">
-          Tires Size:{carInfo[0]?.tireSize}
-        </p>
+        <p className="card-text">Tires Size:{carInfo[0]?.tireSize}</p>
         <p className="card-text">
           Tires Air Pressure:{carInfo[0]?.tirePressure}
         </p>
