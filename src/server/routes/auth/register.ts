@@ -12,7 +12,6 @@ router.post("/", async (req, res, next) => {
     let user = req.body;
     user.password = hashPassword(req.body.password);
     let result: any = await DB.Users.insert(
-      user.username,
       user.email,
       user.firstName,
       user.lastName,

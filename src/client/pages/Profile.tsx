@@ -4,7 +4,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { json } from "../utils/api";
 
-const Profile: React.FC<IProfileProps> = () => {
+const Profile: React.FC<IProfileProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
   const [showAddBar, setShowAddBar] = useState(false);
   const [vin, setVin] = useState("");
@@ -147,12 +147,5 @@ const Profile: React.FC<IProfileProps> = () => {
   );
 };
 
-interface IProfileProps extends RouteComponentProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface IProfileProps extends RouteComponentProps {}
 export default Profile;

@@ -46,14 +46,7 @@ export default class Landing extends React.Component<
   }
 }
 
-interface ILandingProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface ILandingProps {}
 
 interface ILandingState {
   userInfo: {

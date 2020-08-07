@@ -19,15 +19,14 @@ export const getUserByEmail = async (email: string) =>
 
 //Creates a new user
 export const insert = async (
-  username: string,
   email: string,
   firstName: string,
   lastName: string,
   password: string
 ) =>
   Query(
-    "INSERT INTO users(username, email, pass, firstName, lastName) VALUES(?,?,?,?,?)",
-    [username, email, password, firstName, lastName]
+    "INSERT INTO users(email, pass, firstName, lastName) VALUES(?,?,?,?)",
+    [email, password, firstName, lastName]
   );
 
 export default {

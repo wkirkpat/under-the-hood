@@ -1,88 +1,101 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import {RouteComponentProps} from "react-router";
-import { Button, FormGroup, FormControl, Container } from "react-bootstrap";
+import { RouteComponentProps } from "react-router";
+import { FormGroup, FormControl } from "react-bootstrap";
+import { json, setAccessToken, User } from "../utils/api";
 
-
-const Login: React.FC<ILoginProps> = () => {
-
-
+const Login: React.FC<ILoginProps> = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [alert, setAlert] = useState(false);
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
+  const handleLogin = async (e:React.MouseEvent<HTMLButtonElement>) => {
+    try {
+      let result = await json("/auth/login", "POST", {
+        email: email,
+        password: password,
+      });
 
-  function handleSubmit(event:any) {
-    event.preventDefault();
-  }
+      if (result) {
+        setAlert(false);
+        setAccessToken(result.token, {
+          userid: result.userid,
+          role: result.role,
+        });
+      } else {
+        setAlert(true);
+      }
+    } catch (e) {
+      throw e;
+    }
+  };
+
+  useEffect(() => {
+    if(User.userid) {
+    }
+  }, [])
 
   return (
     <div>
-      <div style={{  }}>
-      <Header
-        hasMenu={false}
-        hasProfile={false}
-        hasSearch={false}
-        hasLogin={false}
-        title="Under the Hood"
-        subtitle="Who's Under the Hood"
-      />
-  </div>
-
-
-  { <React.Fragment>
-<div className="container d-flex justify-content-center mx-auto align-middle" style={{
-        flexDirection:"column",
-        width:"300px",
-       height:"800px"
-       }}>
-        <div className="Login">
-          <form onSubmit={handleSubmit}>
-            <FormGroup controlId="email">
-              <label>Email</label>
-              <FormControl
-              
-               
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-            </FormGroup>
-            <FormGroup controlId="password">
-              <label>Password</label>
-              <FormControl
-             
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                type="password"
-              />
-            </FormGroup>
-
-           
-
-            <button>
-              <Link to="/home" >Sign In</Link>
-            </button>
-          </form>
-          </div>
-        </div>
-       </React.Fragment>
-      }
+      <div>
+        <Header
+          hasMenu={false}
+          hasProfile={false}
+          hasSearch={false}
+          hasLogin={false}
+          title="Under the Hood"
+          subtitle="Who's Under the Hood"
+        />
       </div>
+
+      {
+        <React.Fragment>
+          <div
+            className="container d-flex justify-content-center mx-auto align-middle"
+            style={{
+              flexDirection: "column",
+              width: "300px",
+              height: "800px",
+            }}
+          >
+            {(() => {
+              if (alert) {
+                return (
+                  <div className="alert alert-danger" role="alert">
+                    Invalid Login
+                  </div>
+                );
+              }
+            })()}
+            <div className="Login">
+              <FormGroup controlId="email">
+                <label>Email</label>
+                <FormControl
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup controlId="password">
+                <label>Password</label>
+                <FormControl
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                />
+              </FormGroup>
+
+              <button onClick={handleLogin}>
+               Sign In
+              </button>
+            </div>
+          </div>
+        </React.Fragment>
+      }
+    </div>
   );
-}
+};
 
+interface ILoginProps extends RouteComponentProps {}
 
-interface ILoginProps extends RouteComponentProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
-
-export default Login 
+export default Login;

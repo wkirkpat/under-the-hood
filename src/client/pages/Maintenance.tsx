@@ -49,7 +49,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           hasSearch
         />
       </div>
-      <div className="container d-flex border rounded justify-content-between">
+      <div className="container d-flex border rounded justify-content-between mt-3">
       <div className="carInformation">
         <h2 className="user">Will Kirkpatrick</h2>
         <p className="make">{carInfo[0]?.make}</p>
@@ -64,7 +64,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="container d-flex border rounded justify-content-between">
         <div className="previousOilChange mt-2 mr-4">
-          <h2 className="card-title">Previous Oil Change: </h2>
+          <h2 className="card-title pr-5">Previous Oil Change: </h2>
           <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
           <p className="card-text">Oil Filter:</p>
           <p className="card-text">
@@ -88,7 +88,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </div>
         </div>
         <div className="nextOilChange mt-2 ">
-          <h2 className="card-title">Next Oil Change:</h2>
+          <h2 className="card-title pr-5">Next Oil Change:</h2>
           <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
           <p className="card-text">Oil Filter:</p>
           <p className="card-text">
@@ -99,11 +99,13 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="container d-flex border rounded justify-content-between">
       <div className="previousBrakeChange">
-        <h2 className="card-title">Previous Brake Change:</h2>
+        <h2 className="card-title pr-5">Previous Brake Change:</h2>
         <p className="card-text">
           Brake Pads Front:
         </p>
-        <p> Date:{carInfo[0]?.brakePadsFront} </p>
+        <p> Date: {moment(carInfo[0]?.previousBrakeChange).format(
+              "MM/DD/YYYY"
+            )} </p>
         <div className="form-group row">
             <label htmlFor="brakePadsFront" className="col-form-label ml-3 mr-1">
               Date:
@@ -118,10 +120,12 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         <p className="card-text">Brake Pads Rear:</p>
-        <p> Date:{carInfo[0]?.brakePadsRear} </p>
+        <p> Date: {moment(carInfo[0]?.brakePadsRear).format(
+              "MM/DD/YYYY"
+            )} </p>
         <div className="form-group row">
             <label htmlFor="brakePadsRear" className="col-form-label ml-3 mr-1">
-              Date:
+              Date: 
             </label>
             <div className="">
               <input
@@ -135,7 +139,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">
           Brake Routers Front:
         </p>
-        <p> Date:{carInfo[0]?.brakeRouterFront} </p>
+        <p> Date: {moment(carInfo[0]?.brakeRouterFront).format(
+              "MM/DD/YYYY"
+            )} </p>
         <div className="form-group row">
             <label htmlFor="brakeRouterFront" className="col-form-label ml-3 mr-1">
               Date:
@@ -152,7 +158,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">
           Brake Routers Rear:
         </p>
-        <p> Date: {carInfo[0]?.brakeRouterRear}</p>
+        <p> Date: {moment(carInfo[0]?.brakeRouterRear).format(
+              "MM/DD/YYYY"
+            )}</p>
         <div className="form-group row">
             <label htmlFor="brakeRouterRear" className="col-form-label ml-3 mr-1">
               Date:
@@ -167,7 +175,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         <p className="card-text">Brake Calipers:</p>
-        <p> Date:{carInfo[0]?.brakeCalipers} </p>
+        <p> Date: {moment(carInfo[0]?.brakeCalipers).format(
+              "MM/DD/YYYY"
+            )}</p>
         <div className="form-group row">
             <label htmlFor="brakeCalipers" className="col-form-label ml-3 mr-1">
               Date:
@@ -182,7 +192,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         <p className="card-text">Brake Drums:</p>
-        <p> Date:{carInfo[0]?.brakeDrum} </p>
+        <p> Date: {moment(carInfo[0]?.brakeDrums).format(
+              "MM/DD/YYYY"
+            )} </p>
         <div className="form-group row">
             <label htmlFor="brakeDrums" className="col-form-label ml-3 mr-1">
               Date:
@@ -197,7 +209,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         <p className="card-text">Brake Hoses:</p>
-        <p> Date:{carInfo[0]?.brakeHoses} </p>
+        <p> Date: {moment(carInfo[0]?.brakeHoses).format(
+              "MM/DD/YYYY"
+            )} </p>
         <div className="form-group row">
             <label htmlFor="brakeHoses" className="col-form-label ml-3 mr-1">
               Date:
@@ -212,7 +226,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         <p className="card-text">Brake Line:</p>
-        <p> Date:{carInfo[0]?.brakeLines} </p>
+        <p> Date: {moment(carInfo[0]?.brakeLines).format(
+              "MM/DD/YYYY"
+            )}</p>
         <div className="form-group row">
             <label htmlFor="brakeHoses" className="col-form-label ml-3 mr-1">
               Date:
@@ -228,7 +244,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </div>
       </div>
       <div className="nextBrakeChange">
-        <h2 className="card-title">Next Brake Change:</h2>
+        <h2 className="card-title pr-5">Next Brake Change:</h2>
         <p className="card-text mt-5">Brake Pads Front:</p>
         <p>Date: {moment(carInfo[0]?.brakePadsFront).add(6, "months").calendar()} </p>
         <p className="card-text mt-5">Brake Pads Rear:</p>
@@ -249,9 +265,11 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="container d-flex border rounded justify-content-between">
       <div className="previousBatterySwap">
-        <h2 className="card-title">Previous Battery Swap:</h2>
-        <p className="card-text">Battery Size:{carInfo[0]?.batterySize}</p>
-        <p className="card-text">Date:{carInfo[0]?.batterySwap}</p>
+        <h2 className="card-title pr-5">Previous Battery Swap:</h2>
+        <p className="card-text">Battery Size: {carInfo[0]?.batterySize}</p>
+        <p className="card-text">Date: {moment(carInfo[0]?.batterySwap).format(
+              "MM/DD/YYYY"
+            )}</p>
         <div className="form-group row">
             <label htmlFor="batterySwap" className="col-form-label ml-3 mr-1">
               Date:
@@ -267,15 +285,17 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </div>
       </div>
       <div className="nextBatterySwap">
-        <h2 className="card-title">Next Battery Swap:</h2>
+        <h2 className="card-title pr-5">Next Battery Swap:</h2>
         <p className="card-text">Battery Size:</p>
         <p className="card-text">Date: {moment(carInfo[0]?.batterySwap).add(48, "months").calendar()} </p>
       </div>
       </div>
       <div className="container d-flex border rounded justify-content-between">
       <div className="previousTireMaintenance">
-        <h2 className="card-title">Previous Tire Maintenance</h2>
-        <p className="card-text">Tires Rotated:{carInfo[0]?.tireRotation}</p>
+        <h2 className="card-title pr-5">Previous Tire Maintenance</h2>
+        <p className="card-text">Tires Rotated: {moment(carInfo[0]?.tireRotation).format(
+              "MM/DD/YYYY"
+            )}</p>
         <div className="form-group row">
             <label htmlFor="tireRotation" className="col-form-label ml-3 mr-1">
               Date:
@@ -291,7 +311,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </div>
         <p className="card-text">Tires Size:{carInfo[0]?.tireSize}</p>
         <p className="card-text">
-          Tires Air Pressure:{carInfo[0]?.tirePressure}
+          Tires Air Pressure: {carInfo[0]?.tirePressure}
         </p>
       </div>
       <div className="nextTireMaintenance">
@@ -306,13 +326,6 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
   );
 };
 
-interface IMaintenanceProps extends RouteComponentProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface IMaintenanceProps extends RouteComponentProps {}
 
 export default Maintance;
