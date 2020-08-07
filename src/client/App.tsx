@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import Details from "./pages/Details";
-import FuncDIY from "./pages/FuncDIY";
+import DIY from "./pages/DIY";
 import EWL from "./pages/EWL";
 import Maintenance from "./pages/Maintenance";
 import Symptoms from "./pages/Symptoms";
@@ -35,7 +35,13 @@ class App extends React.Component<IAppProps, IAppState> {
               />
             </Route>
             <Route path="/diy">
-              <FuncDIY/>
+              <DIY
+                title="title"
+                hasMenu
+                hasLogin
+                hasProfile
+                hasSearch
+                subtitle="subtitle" />
             </Route>
             <Route path="/ewl">
               <EWL
@@ -50,7 +56,7 @@ class App extends React.Component<IAppProps, IAppState> {
             <Route path="/maintenance">
               <Maintenance
                 title="title"
-				        hasMenu
+                hasMenu
                 hasLogin
                 hasProfile
                 hasSearch
@@ -124,8 +130,8 @@ class App extends React.Component<IAppProps, IAppState> {
   }
 }
 
-export interface IAppProps {}
+export interface IAppProps { }
 
-export interface IAppState {}
+export interface IAppState { }
 
 export default App;

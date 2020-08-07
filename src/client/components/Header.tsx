@@ -24,23 +24,23 @@ export default class Header extends React.Component<
             justifyContent: "space-between",
           }}
         >
-          {this.props.hasMenu ? <MenuButton /> : null}
-          <h3 className="mt-4">{this.props.title}</h3>
+          {this.props.hasMenu ? <MenuButton/> : <div style={{flex:"1 2"}}/>}
+          <h3 className="mt-4" style={{flex: "8", textAlign:"center"}}>{this.props.title}</h3>
           {this.props.hasProfile ?
-            <Link to="/profile" style={{margin:"0 20px", textAlign:"center"}}>
+            <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center"}}>
               <div
                 style={{
                   display: "block",
                   height: "50px",
                   width: "50px",
-                  backgroundColor: "#a3a3a3"
+                  backgroundColor: "#a3a3a3",
+                  margin: "auto"
                 }}
-                className="mt-3"
+                className="mt-4"
               />
               <span>{this.state.userInfo.name}</span>
-            </Link> : null}
-          {this.props.hasLogin ? (
-            <div className="mt-3 mr-3">
+            </Link> : this.props.hasLogin ? (
+            <div className="mt-4 mr-3" style={{flex: "1 2"}}>
               <button className="btn btn-primary btn-sm border border-dark mr-2">
                 <Link className="text-dark" to="/login">
                   Login
@@ -52,8 +52,7 @@ export default class Header extends React.Component<
                 </Link>
               </button>
             </div>
-          ) : null}
-          {!this.props.hasSearch && !this.props.hasLogin ? <div /> : null}
+          ) : <div style={{flex: "1 2"}}/>}
         </div>
         <div style={{ textAlign: "center" }}>{this.props.subtitle}</div>
       </div>
