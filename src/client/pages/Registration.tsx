@@ -1,8 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import Header from "../components/Header";
-import { Container } from "react-bootstrap";
+import { FormGroup, FormControl} from "react-bootstrap";
 
+function handleSubmit(event:any) {
+  event.preventDefault();
+}
 
 export default class Registration extends React.Component<
   IRegistrationProps,
@@ -19,17 +22,43 @@ export default class Registration extends React.Component<
           title="Under the Hood"
           subtitle="Who's Under the Hood?"
         />
-        <div style={{ top: "75%", left: "50%", position: "absolute" }}>
-          <div style={{}} />
-
+        
+        <div className="container d-flex justify-content-center mx-auto align-middle" style={{
+        flexDirection:"column",
+        width:"300px",
+       height:"800px"
+       }}>
+        <div className="Login">
+          <form onSubmit={handleSubmit}>
+            <FormGroup>
+              <label>First Name</label>
+              <FormControl
+              />
+              <label>Last Name</label>
+              <FormControl
+              />
+              <label>Email</label>
+              <FormControl
+                type="email"
+              />
+              <label>Password</label>
+              <FormControl
+                type="password"
+              />
+              <label>Confirm Password</label>
+              <FormControl
+                type="password"
+              />
+            </FormGroup>
+            <button>
+              <a href="/profile" style={{color:"black"}}>Register</a>
+              {/* <Link to="/home">Register</Link> */}
+            </button>
+          </form>
+          </div>
         </div>
 
-   
         
-
-        <button>
-          <Link to="/profile">Sign Up</Link>
-        </button>
       </div>
     );
   }

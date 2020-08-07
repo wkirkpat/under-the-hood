@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "../components/Header";
 import {RouteComponentProps} from "react-router";
-
-
-
 import { Button, FormGroup, FormControl, Container } from "react-bootstrap";
 
 
