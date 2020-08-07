@@ -28,13 +28,7 @@ class App extends React.Component<IAppProps, IAppState> {
               <Details />
             </Route>
             <Route path="/diy">
-              <DIY
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle" />
+              <DIY />
             </Route>
             <Route path="/ewl">
               <EWL />

@@ -40,10 +40,11 @@ export const json = async <T = any>(
 };
 
 //This function just allows us to set a users credentials to be their access token, typically used when a user logs in or registers
-export const setAccessToken = (
+export const setAccessToken = async (
   token: string,
   user: {} = { userid: undefined, role: "guest" }
 ) => {
+  let 
   AccessToken = token;
   User = user;
 

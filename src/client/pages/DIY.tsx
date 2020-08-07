@@ -40,7 +40,7 @@ const DIY: React.SFC<IDIYProps> = (props) => {
         <div style={{ flex: "5" }}>
             <Switch>
               <Route exact path={path}>
-                <div>Default</div>
+                <h3 className="mx-auto mt-3" style={{width: "700px"}}>Choose a Topic to Learn About!</h3>
               </Route>
               <Route path={`${path}/:diyID`}>
                 <DIYFuncItem/>
@@ -76,13 +76,6 @@ const DIY: React.SFC<IDIYProps> = (props) => {
     }
 }
 
-interface IDIYProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface IDIYProps {}
 
 export default DIY;

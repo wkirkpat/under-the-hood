@@ -2,7 +2,7 @@ import * as React from "react";
 import Header from "../components/Header";
 import { Link, RouteComponentProps } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { json } from "../utils/api";
+import { json, User } from "../utils/api";
 
 const Profile: React.FC<IProfileProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
@@ -12,7 +12,7 @@ const Profile: React.FC<IProfileProps> = (props) => {
 
   const getCarInfo = async () => {
     try {
-      let data = await json("/api/vehicles/info/1");
+      let data = await json(`/api/vehicles/info/${User.userid}`);
       setCarInfo(data);
     } catch (e) {
       throw e;
@@ -38,7 +38,7 @@ const Profile: React.FC<IProfileProps> = (props) => {
             model: data.Results[0].Model,
             year: data.Results[0].ModelYear,
           };
-          let result = json("/api/vehicles/add/1", "POST", newCar);
+          let result = json(`/api/vehicles/add/${User.userid}`, "POST", newCar);
           getCarInfo();
         }
       });
