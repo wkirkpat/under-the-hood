@@ -1,80 +1,98 @@
-import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import React, { useState } from "react";
 import Header from "../components/Header";
-import { FormGroup, FormControl} from "react-bootstrap";
+import { FormGroup, FormControl } from "react-bootstrap";
+import { RouteComponentProps } from "react-router-dom";
+import { json, setAccessToken } from "../utils/api";
 
-function handleSubmit(event:any) {
-  event.preventDefault();
-}
+const Registration: React.FC<IRegistrationProps> = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [passMatch, setPassMatch] = useState(true);
 
-export default class Registration extends React.Component<
-  IRegistrationProps,
-  IRegistrationState
-  > {
-  render() {
-    return (
-      <div>
-        <Header
-          hasLogin={false}
-          hasSearch={false}
-          hasProfile={false}
-          hasMenu={false}
-          title="Under the Hood"
-          subtitle="Who's Under the Hood?"
-        />
-        
-        <div className="container d-flex justify-content-center mx-auto align-middle" style={{
-        flexDirection:"column",
-        width:"300px",
-       height:"800px"
-       }}>
-        <div className="Login">
-          <form onSubmit={handleSubmit}>
-            <FormGroup>
-              <label>First Name</label>
-              <FormControl
-              />
-              <label>Last Name</label>
-              <FormControl
-              />
-              <label>Email</label>
-              <FormControl
-                type="email"
-              />
-              <label>Password</label>
-              <FormControl
-                type="password"
-              />
-              <label>Confirm Password</label>
-              <FormControl
-                type="password"
-              />
-            </FormGroup>
-            <button>
-              <a href="/profile" style={{color:"black"}}>Register</a>
-              {/* <Link to="/home">Register</Link> */}
-            </button>
-          </form>
-          </div>
-        </div>
-
-        
-      </div>
-    );
-  }
-}
-
-interface IRegistrationProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
-
-interface IRegistrationState {
-  userInfo: {
-    name: string;
+  const handleRegister = async () => {
+    if (confirmPass != password) {
+      setPassMatch(false);
+    } else {
+      try {
+        let results = await json("/auth/register", "POST", {
+          email,
+          password,
+          firstName,
+          lastName,
+        });
+        if (results) {
+          setAccessToken(results.token, {
+            userid: results.userid,
+            role: results.role,
+          });
+        }
+      } catch (e) {
+        throw e;
+      }
+    }
   };
-}
+
+  return (
+    <div>
+      <Header
+        hasLogin={false}
+        hasSearch={false}
+        hasProfile={false}
+        hasMenu={false}
+        title="Under the Hood"
+        subtitle="Who's Under the Hood?"
+      />
+
+      <div
+        className="container d-flex justify-content-center mx-auto align-middle"
+        style={{
+          flexDirection: "column",
+          width: "300px",
+          height: "800px",
+        }}
+      >
+        <div className="Login">
+          {(() => {
+            if(!passMatch) {
+              return (
+                <div className="alert alert-danger" role="alert">
+                Passwords Don't Match
+              </div>
+              )
+            }
+          })()}
+          <FormGroup>
+            <label>First Name</label>
+            <FormControl onChange={(e) => setFirstName(e.target.value)} />
+            <label>Last Name</label>
+            <FormControl onChange={(e) => setLastName(e.target.value)} />
+            <label>Email</label>
+            <FormControl
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label>Password</label>
+            <FormControl
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <label>Confirm Password</label>
+            <FormControl
+              type="password"
+              onChange={(e) => setConfirmPass(e.target.value)}
+            />
+          </FormGroup>
+          <button onClick={handleRegister}>Register</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface IRegistrationProps extends RouteComponentProps {}
+
+
+export default Registration;

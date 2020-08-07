@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import SimpleImageSlider from "react-simple-image-slider";
 import { ReactPhotoCollage } from "react-photo-collage";
 
-export default class Home extends React.Component<IHomeProps, IHomeState> {
+export default class Home extends React.Component<IHomeProps> {
   render() {
     const images = [
       { url: "images/HomeHead1.jpg" },
@@ -61,17 +61,5 @@ export default class Home extends React.Component<IHomeProps, IHomeState> {
 
 
 
-interface IHomeProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface IHomeProps {}
 
-interface IHomeState {
-  userInfo: {
-    name: string;
-  };
-}

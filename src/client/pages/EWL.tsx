@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import WarningLight from '../components/WarningLight';
 import data from '../data/ewl.json';
 
-export default class EWL extends React.Component<IEWLProps, IEWLState> {
+export default class EWL extends React.Component<IEWLProps> {
   render() {
     console.log(data);
     return <div style={{backgroundColor:"#F2F3F4"}}>
@@ -27,17 +27,4 @@ export default class EWL extends React.Component<IEWLProps, IEWLState> {
   }
 }
 
-interface IEWLProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
-
-interface IEWLState {
-  userInfo: {
-    name: string;
-  };
-}
+interface IEWLProps {}

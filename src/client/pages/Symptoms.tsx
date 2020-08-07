@@ -110,13 +110,6 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
   );
 };
 
-interface ISymptomsProps {
-  subtitle: string;
-  hasSearch: boolean;
-  hasLogin: boolean;
-  hasProfile: boolean;
-  hasMenu: boolean;
-  title: string;
-}
+interface ISymptomsProps {}
 
 export default Symptoms;

@@ -25,14 +25,7 @@ class App extends React.Component<IAppProps, IAppState> {
         <div>
           <Switch>
             <Route path="/details">
-              <Details
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Details />
             </Route>
             <Route path="/diy">
               <DIY
@@ -44,84 +37,28 @@ class App extends React.Component<IAppProps, IAppState> {
                 subtitle="subtitle" />
             </Route>
             <Route path="/ewl">
-              <EWL
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <EWL />
             </Route>
             <Route path="/maintenance">
-              <Maintenance
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="Maintenance"
-              />
+              <Maintenance />
             </Route>
             <Route path="/diagnosis">
-              <Symptoms
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Symptoms />
             </Route>
             <Route exact path="/home">
-              <Home
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Home />
             </Route>
             <Route path="/login">
-              <Login
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Login />
             </Route>
             <Route path="/register">
-              <Registration
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Registration />
             </Route>
             <Route path="/profile">
-              <Profile
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Profile />
             </Route>
             <Route exact path="/">
-              <Landing
-                title="title"
-                hasMenu
-                hasLogin
-                hasProfile
-                hasSearch
-                subtitle="subtitle"
-              />
+              <Landing />
             </Route>
           </Switch>
         </div>
