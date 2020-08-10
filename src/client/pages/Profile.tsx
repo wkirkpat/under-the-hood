@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { Link, RouteComponentProps } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { json, User } from "../utils/api";
+import MileageModal from "../components/MileageModal";
 
 const Profile: React.FC<IProfileProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
@@ -109,23 +110,10 @@ const Profile: React.FC<IProfileProps> = (props) => {
                 <li className="list-group-item">Model: {info.model} </li>
                 <li className="list-group-item">Year: {info._year} </li>
                 <li className="list-group-item">
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlInput1">Mileage</label>
-                    <input
-                      type="number"
-                      className="form-control"
-                      placeholder={info.mileage}
-                      onChange={(event) => {
-                        setMileage(event.target.value);
-                      }}
-                    />
-                    <button
-                      onClick={() => handleMileage(info.id)}
-                      className="badge badge-secondary mt-1"
-                    >
-                      Update
-                    </button>
-                  </div>
+                  Mileage: {info.mileage}
+                  <span className="ml-5">
+                    <MileageModal carId={info.id} handler={handleMileage} />
+                  </span>
                 </li>
                 <Link to={`/maintenance/${info.vin}`}>
                   <li className="list-group-item">Maintenance</li>
@@ -148,4 +136,5 @@ const Profile: React.FC<IProfileProps> = (props) => {
 };
 
 interface IProfileProps extends RouteComponentProps {}
+
 export default Profile;
