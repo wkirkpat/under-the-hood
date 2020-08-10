@@ -24,36 +24,16 @@ class App extends React.Component<IAppProps, IAppState> {
       <Router>
         <div>
           <Switch>
-            <Route path="/details">
-              <Details />
-            </Route>
-            <Route path="/diy">
-              <DIY />
-            </Route>
-            <Route path="/ewl">
-              <EWL />
-            </Route>
-            <Route path="/maintenance">
-              <Maintenance />
-            </Route>
-            <Route path="/diagnosis">
-              <Symptoms />
-            </Route>
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/register">
-              <Registration />
-            </Route>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route exact path="/">
-              <Landing />
-            </Route>
+            <Route path="/details" component={Details} />
+            <Route path="/diy" component={DIY} />
+            <Route path="/ewl" component={EWL} />
+            <Route path="/maintenance" component={Maintenance} />
+            <Route path="/diagnosis" component={Symptoms} />
+            <Route exact path="/home" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Registration} />
+            <Route path="/profile" component={Profile} />
+            <Route exact path="/" component={Landing} />
           </Switch>
         </div>
       </Router>
