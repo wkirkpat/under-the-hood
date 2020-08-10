@@ -49,7 +49,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           hasSearch
         />
       </div>
-      <div className="container d-flex border rounded justify-content-between mt-3">
+      <div className="container d-flex justify-content-between mt-3">
       <div className="carInformation">
         <h2 className="user">Will Kirkpatrick</h2>
         <p className="make">{carInfo[0]?.make}</p>
@@ -62,7 +62,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         width="350px"
       ></img>
       </div>
-      <div className="container d-flex border rounded justify-content-between">
+      <div className="container d-flex justify-content-between oilChange">
         <div className="previousOilChange mt-2 mr-4">
           <h2 className="card-title pr-5">Previous Oil Change: </h2>
           <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
@@ -97,7 +97,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </p>
         </div>
       </div>
-      <div className="container d-flex border rounded justify-content-between">
+      <div className="container d-flex justify-content-between brakesChange">
       <div className="previousBrakeChange">
         <h2 className="card-title pr-5">Previous Brake Change:</h2>
         <p className="card-text">
@@ -245,25 +245,25 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title pr-5">Next Brake Change:</h2>
-        <p className="card-text mt-5">Brake Pads Front:</p>
+        <p className="card-text brakePadsFront">Brake Pads Front:</p>
         <p>Date: {moment(carInfo[0]?.brakePadsFront).add(6, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Pads Rear:</p>
+        <p className="card-text brakePadsRear ">Brake Pads Rear:</p>
         <p>Date: {moment(carInfo[0]?.brakePadsRear).add(6, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Routers Front:</p>
+        <p className="card-text brakeRoutersFront ">Brake Routers Front:</p>
         <p>Date: {moment(carInfo[0]?.brakeRouterFront).add(12, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Routers Rear:</p>
+        <p className="card-text brakeRoutersRear">Brake Routers Rear:</p>
         <p>Date: {moment(carInfo[0]?.brakeRouterRear).add(12, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Calipers:</p>
+        <p className="card-text brakeCalipers">Brake Calipers:</p>
         <p>Date: {moment(carInfo[0]?.brakeCalipers).add(12, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Drums:</p>
+        <p className="card-text brakeDrums">Brake Drums:</p>
         <p>Date: {moment(carInfo[0]?.brakeDrum).add(18, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Hoses:</p>
+        <p className="card-text brakeHoses">Brake Hoses:</p>
         <p>Date: {moment(carInfo[0]?.brakeHose).add(24, "months").calendar()} </p>
-        <p className="card-text mt-5">Brake Line:</p>
+        <p className="card-text brakeLine">Brake Line:</p>
         <p>Date: {moment(carInfo[0]?.brakeLines).add(24, "months").calendar()} </p>
       </div>
       </div>
-      <div className="container d-flex border rounded justify-content-between">
+      <div className="container d-flex justify-content-between batteryChange">
       <div className="previousBatterySwap">
         <h2 className="card-title pr-5">Previous Battery Swap:</h2>
         <p className="card-text">Battery Size: {carInfo[0]?.batterySize}</p>
@@ -290,7 +290,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">Date: {moment(carInfo[0]?.batterySwap).add(48, "months").calendar()} </p>
       </div>
       </div>
-      <div className="container d-flex border rounded justify-content-between">
+      <div className="container d-flex justify-content-between tireChange">
       <div className="previousTireMaintenance">
         <h2 className="card-title pr-5">Previous Tire Maintenance</h2>
         <p className="card-text">Tires Rotated: {moment(carInfo[0]?.tireRotation).format(

@@ -16,7 +16,7 @@ export default class Header extends React.Component<
   }
   render() {
     return (
-      <div style={{ height: "10vh", backgroundColor: "#42f5b9" }}>
+      <div style={{ height: "10vh", backgroundColor: "#35b0c6" }}>
         <div
           style={{
             display: "flex",
@@ -26,7 +26,7 @@ export default class Header extends React.Component<
           className="ml-2"
         >
           {this.props.hasMenu ? <MenuButton/> : <div style={{flex:"1 2"}}/>}
-          <h3 className="mt-4" style={{flex: "8", textAlign:"center"}}>{this.props.title}</h3>
+          <h3 className="mt-4" style={{flex: "8", textAlign:"center", color:"#ffffff"}}>{this.props.title}</h3>
           {this.props.hasProfile ?
             <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center"}}>
               <div
@@ -42,12 +42,12 @@ export default class Header extends React.Component<
               <span>{this.state.userInfo.name}</span>
             </Link> : this.props.hasLogin ? (
             <div className="mt-4 mr-3" style={{flex: "1 2"}}>
-              <button className="btn btn-primary btn-sm border border-dark mr-2">
+              <button className="btn btn-sm border border-dark mr-2 btn-light">
                 <Link className="text-dark" to="/login">
                   Login
                 </Link>
               </button>
-              <button className="btn btn-primary btn-sm border border-dark">
+              <button className="btn btn-sm border border-dark btn-light">
                 <Link className="text-dark" to="/register">
                   Register
                 </Link>
