@@ -22,6 +22,7 @@ const Login: React.FC<ILoginProps> = (props) => {
           userid: result.userid,
           role: result.role,
         });
+        props.history.replace("/home"); 
       } else {
         setAlert(true);
       }
@@ -32,6 +33,7 @@ const Login: React.FC<ILoginProps> = (props) => {
 
   useEffect(() => {
     if(User.userid) {
+      props.history.replace("/home"); 
     }
   }, [])
 

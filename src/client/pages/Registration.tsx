@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { FormGroup, FormControl } from "react-bootstrap";
 import { RouteComponentProps } from "react-router-dom";
-import { json, setAccessToken } from "../utils/api";
+import { json, setAccessToken, User } from "../utils/api";
 
 const Registration: React.FC<IRegistrationProps> = (props) => {
   const [email, setEmail] = useState("");
@@ -28,12 +28,20 @@ const Registration: React.FC<IRegistrationProps> = (props) => {
             userid: results.userid,
             role: results.role,
           });
+          props.history.replace("/home"); 
         }
       } catch (e) {
         throw e;
       }
     }
   };
+
+  useEffect(() => {
+    if(User.userid) {
+      props.history.replace("/home"); 
+    }
+  }, [])
+
 
   return (
     <div>
