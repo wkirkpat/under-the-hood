@@ -71,14 +71,17 @@ const Profile: React.FC<IProfileProps> = (props) => {
         hasProfile
         hasSearch
       />
-      <button onClick={handleAdd} className="btn btn-success btn-sm m-3">
+      <div className="d-flex container justify-content-center mt-4">
+      <h3>Your Vehicles</h3>
+      <button onClick={handleAdd} className="btn btn-secondary btn-sm ml-5">
         New Vehicle
       </button>
+      </div>
       {(() => {
         if (showAddBar) {
           return (
             <>
-              <div className="form-group mx-sm-3 mb-2">
+              <div className="d-flex form-group mx-sm-3 mb-2 mt-3 justify-content-center">
                 <input
                   type="text"
                   className="form-control col-4"
@@ -86,25 +89,28 @@ const Profile: React.FC<IProfileProps> = (props) => {
                   placeholder="Enter VIN..."
                   onChange={(event) => setVin(event.target.value)}
                 />
-              </div>
+              
               <button
                 type="submit"
-                className="btn btn-primary mb-2 ml-3"
+                className="btn btn-secondary mb-2 ml-3"
                 onClick={handleNewVehicle}
               >
                 Add Vehicle
               </button>
+              </div>
             </>
           );
         }
       })()}
       {carInfo.map((info) => {
         return (
+          <>
+                    <hr className="mt-5" />
           <div
             key={info.id}
             className="container d-flex justify-content-between"
           >
-            <div className="card col-4 mt-5 ml-3">
+            <div className="card col-4 mt-5 ml-3 border border-dark shadow rounded">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">Make: {info.make} </li>
                 <li className="list-group-item">Model: {info.model} </li>
@@ -129,6 +135,8 @@ const Profile: React.FC<IProfileProps> = (props) => {
               <p>VIN: {info.vin} </p>
             </div>
           </div>
+
+          </>
         );
       })}
     </div>
