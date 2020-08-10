@@ -67,6 +67,7 @@ const Login: React.FC<ILoginProps> = (props) => {
                 );
               }
             })()}
+            <div><a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp"></a>  <a href="https://www.flaticon.com/" title="Flaticon"></a></div>
             <div className="Login">
               <FormGroup controlId="email">
                 <label>Email</label>
