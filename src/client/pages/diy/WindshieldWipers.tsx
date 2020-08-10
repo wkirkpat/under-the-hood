@@ -1,42 +1,67 @@
 import React from "react";
-import Container from 'react-bootstrap';
-import jumbotron from 'react-bootstrap';
-import ReactPlayer from 'react-player'
+import Container, { Jumbotron } from "react-bootstrap";
+import jumbotron from "react-bootstrap";
+import ReactPlayer from "react-player";
 
-
-
-
-
-export default class WindshilWipers extends React.Component {
+export default class Battery extends React.Component {
   render() {
     return (
-      <div className= "container">
-          <div className= "jumbotron row justify-content-center">
-          <h1>DIY Windshield Wiper Care</h1>
-          </div>        
+      <div className="container">
+        <div
+          className="jumbotron "
+          style={{
+            backgroundColor: "#ffffff",
+          }} >
+
+
+            
+          <h1 className="display-4">DIY Windshield Wiper Care</h1>
+        </div>     
            
-           <div className= "d-flex justify-content-left row ">
-           <h3>How to Replace Winshield Wiper</h3></div>
-           <div className= "justify-content-left row 'player-wrapper' " >
-           <ReactPlayer
-            className='react-player'
-             url='https://www.youtube.com/watch?v=oeezwXQC-mc'
-             width='100%'
-            />   
+
+       
+
+
+
+        <div className="card mt-5">
+          <div
+            className="card-body"
+            style={{
+              borderColor: "#42f5b9",
+              color: "#ffffff",
+              backgroundColor: "#474b52",
+            }}
+          >
+            <h5 className="card-title">
+            
+How to Replace Windshield Wiper</h5>
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
           </div>
-
-
-        
-
-
-          </div>
-          
-          
-
-
-      
+          <ReactPlayer
+            className="react-player"
+            url="https://www.youtube.com/watch?v=oeezwXQC-mc"
+            width="100%"
+          />
+        </div>
+        </div>
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

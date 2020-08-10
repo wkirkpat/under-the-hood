@@ -1,42 +1,66 @@
 import React from "react";
-import Container from 'react-bootstrap';
-import jumbotron from 'react-bootstrap';
-import ReactPlayer from 'react-player'
+import Container, { Jumbotron } from "react-bootstrap";
+import jumbotron from "react-bootstrap";
+import ReactPlayer from "react-player";
 
-
-
-
-
-export default class Waxing extends React.Component {
+export default class Battery extends React.Component {
   render() {
     return (
-      <div className= "container">
-          <div className= "jumbotron row justify-content-center">
-          <h1> DIY Car Wax</h1>
-          </div>        
+      <div className="container">
+        <div
+          className="jumbotron "
+          style={{
+            backgroundColor: "#ffffff",
+          }} >
+
+
+            
+          <h1 className="display-4">DIY Car Wax</h1>
+        </div>     
            
-           <div className= "d-flex justify-content-left row ">
-           <h3>How to Wax Your Car</h3></div>
-           <div className= "justify-content-left row 'player-wrapper' " >
-           <ReactPlayer
-            className='react-player'
-             url='https://www.youtube.com/watch?v=1dc4toCFGFI'
-             width='100%'
-            />   
+
+       
+
+
+
+        <div className="card mt-5">
+          <div
+            className="card-body"
+            style={{
+              borderColor: "#42f5b9",
+              color: "#ffffff",
+              backgroundColor: "#474b52",
+            }}
+          >
+            <h5 className="card-title">
+How to Wax Your Car</h5>
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
           </div>
-
-
-
-
-
-          </div>
-          
-          
-
-
-      
+          <ReactPlayer
+            className="react-player"
+            url=" https://www.youtube.com/watch?v=1dc4toCFGFI"
+            width="100%"
+          />
+        </div>
+        </div>
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
