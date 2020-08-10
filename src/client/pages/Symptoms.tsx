@@ -35,7 +35,7 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
         hasProfile
         hasSearch
       />
-      <div className="form-row align-items-center mt-5 ml-3 mb-5">
+      <div className="form-row align-items-middle justify-content-center mt-5 ml-3 mb-5">
         <div className="col-sm-3 my-1">
           <input
             type="text"
@@ -48,7 +48,7 @@ const Symptoms: React.FC<ISymptomsProps> = (props) => {
         <div className="col-auto my-1">
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-secondary"
             onClick={handleSubmit}
           >
             Submit

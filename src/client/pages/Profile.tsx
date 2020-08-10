@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { Link, RouteComponentProps } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { json, User } from "../utils/api";
+import MileageModal from "../components/MileageModal";
 
 const Profile: React.FC<IProfileProps> = (props) => {
   const [carInfo, setCarInfo] = useState([]);
@@ -70,14 +71,17 @@ const Profile: React.FC<IProfileProps> = (props) => {
         hasProfile
         hasSearch
       />
-      <button onClick={handleAdd} className="btn btn-success btn-sm m-3">
-        New Vehicle
-      </button>
+      <div className="d-flex container justify-content-center mt-4">
+        <h3>Your Vehicles</h3>
+        <button onClick={handleAdd} className="btn btn-secondary btn-sm ml-5">
+          New Vehicle
+        </button>
+      </div>
       {(() => {
         if (showAddBar) {
           return (
             <>
-              <div className="form-group mx-sm-3 mb-2">
+              <div className="d-flex form-group mx-sm-3 mb-2 mt-3 justify-content-center">
                 <input
                   type="text"
                   className="form-control col-4"
@@ -85,62 +89,51 @@ const Profile: React.FC<IProfileProps> = (props) => {
                   placeholder="Enter VIN..."
                   onChange={(event) => setVin(event.target.value)}
                 />
+
+                <button
+                  type="submit"
+                  className="btn btn-secondary mb-2 ml-3"
+                  onClick={handleNewVehicle}
+                >
+                  Add Vehicle
+                </button>
               </div>
-              <button
-                type="submit"
-                className="btn btn-primary mb-2 ml-3"
-                onClick={handleNewVehicle}
-              >
-                Add Vehicle
-              </button>
             </>
           );
         }
       })()}
       {carInfo.map((info) => {
         return (
-          <div
-            key={info.id}
-            className="container d-flex justify-content-between"
-          >
-            <div className="card col-4 mt-5 ml-3">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">Make: {info.make} </li>
-                <li className="list-group-item">Model: {info.model} </li>
-                <li className="list-group-item">Year: {info._year} </li>
-                <li className="list-group-item">
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlInput1">Mileage</label>
-                    <input
-                      type="number"
-                      className="form-control"
-                      placeholder={info.mileage}
-                      onChange={(event) => {
-                        setMileage(event.target.value);
-                      }}
-                    />
-                    <button
-                      onClick={() => handleMileage(info.id)}
-                      className="badge badge-secondary mt-1"
-                    >
-                      Update
-                    </button>
-                  </div>
-                </li>
-                <Link to={`/maintenance/${info.vin}`}>
-                  <li className="list-group-item">Maintenance</li>
-                </Link>
-              </ul>
+          <>
+            <hr className="mt-5" />
+            <div
+              key={info.id}
+              className="container d-flex justify-content-between"
+            >
+              <div className="card col-4 mt-5 ml-3 p-2 border border-dark shadow rounded">
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">Make: {info.make} </li>
+                  <li className="list-group-item">Model: {info.model} </li>
+                  <li className="list-group-item">Year: {info._year} </li>
+                  <li className="list-group-item mb-3">
+                    Mileage: {info.mileage}
+                    <span className="ml-5">
+                      <MileageModal carId={info.id} handler={handleMileage} />
+                    </span>
+                  </li>
+                  <Link className="ml-3" to={`/maintenance/${info.vin}`}>Maintenance</Link>
+                </ul>
+              </div>
+              <div className="col-4 mt-5 d-flex flex-column">
+                <img
+                  src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
+                  height="200px"
+                  width="350px"
+                ></img>
+                <p>VIN: {info.vin} </p>
+              </div>
             </div>
-            <div className="col-4 mt-5 d-flex flex-column">
-              <img
-                src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
-                height="200px"
-                width="350px"
-              ></img>
-              <p>VIN: {info.vin} </p>
-            </div>
-          </div>
+          </>
         );
       })}
     </div>
@@ -148,4 +141,5 @@ const Profile: React.FC<IProfileProps> = (props) => {
 };
 
 interface IProfileProps extends RouteComponentProps {}
+
 export default Profile;
