@@ -72,10 +72,10 @@ const Profile: React.FC<IProfileProps> = (props) => {
         hasSearch
       />
       <div className="d-flex container justify-content-center mt-4">
-      <h3>Your Vehicles</h3>
-      <button onClick={handleAdd} className="btn btn-secondary btn-sm ml-5">
-        New Vehicle
-      </button>
+        <h3>Your Vehicles</h3>
+        <button onClick={handleAdd} className="btn btn-secondary btn-sm ml-5">
+          New Vehicle
+        </button>
       </div>
       {(() => {
         if (showAddBar) {
@@ -89,14 +89,14 @@ const Profile: React.FC<IProfileProps> = (props) => {
                   placeholder="Enter VIN..."
                   onChange={(event) => setVin(event.target.value)}
                 />
-              
-              <button
-                type="submit"
-                className="btn btn-secondary mb-2 ml-3"
-                onClick={handleNewVehicle}
-              >
-                Add Vehicle
-              </button>
+
+                <button
+                  type="submit"
+                  className="btn btn-secondary mb-2 ml-3"
+                  onClick={handleNewVehicle}
+                >
+                  Add Vehicle
+                </button>
               </div>
             </>
           );
@@ -105,37 +105,34 @@ const Profile: React.FC<IProfileProps> = (props) => {
       {carInfo.map((info) => {
         return (
           <>
-                    <hr className="mt-5" />
-          <div
-            key={info.id}
-            className="container d-flex justify-content-between"
-          >
-            <div className="card col-4 mt-5 ml-3 border border-dark shadow rounded">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">Make: {info.make} </li>
-                <li className="list-group-item">Model: {info.model} </li>
-                <li className="list-group-item">Year: {info._year} </li>
-                <li className="list-group-item">
-                  Mileage: {info.mileage}
-                  <span className="ml-5">
-                    <MileageModal carId={info.id} handler={handleMileage} />
-                  </span>
-                </li>
-                <Link to={`/maintenance/${info.vin}`}>
-                  <li className="list-group-item">Maintenance</li>
-                </Link>
-              </ul>
+            <hr className="mt-5" />
+            <div
+              key={info.id}
+              className="container d-flex justify-content-between"
+            >
+              <div className="card col-4 mt-5 ml-3 p-2 border border-dark shadow rounded">
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">Make: {info.make} </li>
+                  <li className="list-group-item">Model: {info.model} </li>
+                  <li className="list-group-item">Year: {info._year} </li>
+                  <li className="list-group-item mb-3">
+                    Mileage: {info.mileage}
+                    <span className="ml-5">
+                      <MileageModal carId={info.id} handler={handleMileage} />
+                    </span>
+                  </li>
+                  <Link className="ml-3" to={`/maintenance/${info.vin}`}>Maintenance</Link>
+                </ul>
+              </div>
+              <div className="col-4 mt-5 d-flex flex-column">
+                <img
+                  src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
+                  height="200px"
+                  width="350px"
+                ></img>
+                <p>VIN: {info.vin} </p>
+              </div>
             </div>
-            <div className="col-4 mt-5 d-flex flex-column">
-              <img
-                src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
-                height="200px"
-                width="350px"
-              ></img>
-              <p>VIN: {info.vin} </p>
-            </div>
-          </div>
-
           </>
         );
       })}
