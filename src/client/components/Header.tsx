@@ -26,7 +26,10 @@ export default class Header extends React.Component<
           className="ml-2"
         >
           {this.props.hasMenu ? <MenuButton/> : <div style={{flex:"1 2"}}/>}
-          <h3 className="mt-4" style={{flex: "8", textAlign:"center", color:"#ffffff"}}>{this.props.title}</h3>
+         <div>
+           <img src="images/LOGO.pngs"/>
+           <h3 className="mt-4" style={{flex: "8", textAlign:"center", color:"#ffffff"}}>{this.props.title}</h3>
+         </div> 
           {this.props.hasProfile ?
             <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center"}}>
               <div
