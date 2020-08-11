@@ -10,7 +10,7 @@ export default class MenuButton extends React.Component<
     return (
       <div style={{flex:"1 2"}}>
       <Dropdown className="mt-4 ml-2">
-    <Dropdown.Toggle variant="link" id="dropdown-basic">
+    <Dropdown.Toggle variant="link" id="dropdown-basic" className="shadow-sm">
    <img style={{width:"30px"}} src="images/menu.png"/>
      </Dropdown.Toggle>
       
