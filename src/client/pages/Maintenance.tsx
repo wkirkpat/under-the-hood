@@ -60,6 +60,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         src="https://www.vehiclehistory.com/evox_color_compressed/chevrolet/equinox/2006/3230/chevrolet-equinox-2006-001-3230-15U-768.jpg"
         height="200px"
         width="350px"
+        className="carImage"
       ></img>
       </div>
       <div className="container d-flex justify-content-between oilChange">
