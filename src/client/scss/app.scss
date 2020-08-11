@@ -34,24 +34,33 @@ $theme-colors: (
     border-radius: 4px!important;
     border-radius: 4px!important;
     margin-bottom: 4px;
+    box-shadow: 0 0 10px;
+    background-image: -webkit-linear-gradient(top, #35b0c6 0%, #0091EA 100%);
+    background-image: -moz-linear-gradient(top, #35b0c6 0%, #0091EA 100%);
+    background-image: -ms-linear-gradient(top, #35b0c6 0%, #0091EA 100%);
+    background-image: -o-linear-gradient(top, #35b0c6 0%, #0091EA 100%);
+    background-image: linear-gradient(top, #35b0c6 0%, #0091EA 100%);
 }
 .brakesChange {
     border:solid black!important;
     border-radius: 4px!important;
     border-radius: 4px!important;
     margin-bottom: 4px;
+    box-shadow: 0 0 10px;
 }
 .batteryChange {
     border:solid black!important;
     border-radius: 4px!important;
     border-radius: 4px!important;
     margin-bottom: 4px;
+    box-shadow: 0 0 10px;
 }
 .tireChange {
     border:solid black!important;
     border-radius: 4px!important;
     border-radius: 4px!important;
     margin-bottom: 8px;
+    box-shadow: 0 0 10px;
 }
 
 .jumbotron {

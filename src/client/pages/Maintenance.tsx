@@ -87,6 +87,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
             </div>
           </div>
         </div>
+        
         <div className="nextOilChange mt-2 ">
           <h2 className="card-title pr-5">Next Oil Change:</h2>
           <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
