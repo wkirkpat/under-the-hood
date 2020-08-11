@@ -100,9 +100,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       <div className="container d-flex justify-content-between brakesChange">
       <div className="previousBrakeChange">
         <h2 className="card-title pr-5">Previous Brake Change:</h2>
-        <p className="card-text">
+        <h4 className="card-text">
           Brake Pads Front:
-        </p>
+        </h4>
         <p> Date: {moment(carInfo[0]?.previousBrakeChange).format(
               "MM/DD/YYYY"
             )} </p>
@@ -119,7 +119,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">Brake Pads Rear:</p>
+        <h4 className="card-text">Brake Pads Rear:</h4>
         <p> Date: {moment(carInfo[0]?.brakePadsRear).format(
               "MM/DD/YYYY"
             )} </p>
@@ -155,9 +155,9 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">
+        <h4 className="card-text">
           Brake Routers Rear:
-        </p>
+        </h4>
         <p> Date: {moment(carInfo[0]?.brakeRouterRear).format(
               "MM/DD/YYYY"
             )}</p>
@@ -174,7 +174,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">Brake Calipers:</p>
+        <h4 className="card-text">Brake Calipers:</h4>
         <p> Date: {moment(carInfo[0]?.brakeCalipers).format(
               "MM/DD/YYYY"
             )}</p>
@@ -191,7 +191,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">Brake Drums:</p>
+        <h4 className="card-text">Brake Drums:</h4>
         <p> Date: {moment(carInfo[0]?.brakeDrums).format(
               "MM/DD/YYYY"
             )} </p>
@@ -208,7 +208,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">Brake Hoses:</p>
+        <h4 className="card-text">Brake Hoses:</h4>
         <p> Date: {moment(carInfo[0]?.brakeHoses).format(
               "MM/DD/YYYY"
             )} </p>
@@ -225,7 +225,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
               />
             </div>
           </div>
-        <p className="card-text">Brake Line:</p>
+        <h4 className="card-text">Brake Line:</h4>
         <p> Date: {moment(carInfo[0]?.brakeLines).format(
               "MM/DD/YYYY"
             )}</p>
@@ -245,21 +245,21 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
       </div>
       <div className="nextBrakeChange">
         <h2 className="card-title pr-5">Next Brake Change:</h2>
-        <p className="card-text brakePadsFront">Brake Pads Front:</p>
+        <h4 className="card-text brakePadsFront">Brake Pads Front:</h4>
         <p>Date: {moment(carInfo[0]?.brakePadsFront).add(6, "months").calendar()} </p>
-        <p className="card-text brakePadsRear ">Brake Pads Rear:</p>
+        <h4 className="card-text brakePadsRear ">Brake Pads Rear:</h4>
         <p>Date: {moment(carInfo[0]?.brakePadsRear).add(6, "months").calendar()} </p>
-        <p className="card-text brakeRoutersFront ">Brake Routers Front:</p>
+        <h4 className="card-text brakeRoutersFront ">Brake Routers Front:</h4>
         <p>Date: {moment(carInfo[0]?.brakeRouterFront).add(12, "months").calendar()} </p>
-        <p className="card-text brakeRoutersRear">Brake Routers Rear:</p>
+        <h4 className="card-text brakeRoutersRear">Brake Routers Rear:</h4>
         <p>Date: {moment(carInfo[0]?.brakeRouterRear).add(12, "months").calendar()} </p>
-        <p className="card-text brakeCalipers">Brake Calipers:</p>
+        <h4 className="card-text brakeCalipers">Brake Calipers:</h4>
         <p>Date: {moment(carInfo[0]?.brakeCalipers).add(12, "months").calendar()} </p>
-        <p className="card-text brakeDrums">Brake Drums:</p>
+        <h4 className="card-text brakeDrums">Brake Drums:</h4>
         <p>Date: {moment(carInfo[0]?.brakeDrum).add(18, "months").calendar()} </p>
-        <p className="card-text brakeHoses">Brake Hoses:</p>
+        <h4 className="card-text brakeHoses">Brake Hoses:</h4>
         <p>Date: {moment(carInfo[0]?.brakeHose).add(24, "months").calendar()} </p>
-        <p className="card-text brakeLine">Brake Line:</p>
+        <h4 className="card-text brakeLine">Brake Line:</h4>
         <p>Date: {moment(carInfo[0]?.brakeLines).add(24, "months").calendar()} </p>
       </div>
       </div>
