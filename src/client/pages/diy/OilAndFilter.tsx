@@ -16,7 +16,8 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Oil and Filter Maintenance</h1>
-        </div>     
+          <hr className="my-5" ></hr>
+             
            
 
        
@@ -34,8 +35,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Oil Levels</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Make sure that your oil levels are where they need to be.
             </p>
           </div>
           <ReactPlayer
@@ -57,8 +57,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Oil Change</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              You don't have to take your care to a mechanic to get an oil change.  You can do it yourself- check it out!
             </p>
           </div>
           <ReactPlayer
@@ -82,8 +81,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Oil Filter</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Make sure your oil filter isn't old!
             </p>
           </div>
           <ReactPlayer
@@ -106,8 +104,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Replace Oil Filter</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+             Learn how to replace the oil filter below. 
             </p>
           </div>
           <ReactPlayer
@@ -129,8 +126,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Air Filter</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              If your air filter was ever important, it is definitely right now. A cleaner, more efficient air filter will help prevent air born viruses. 
             </p>
           </div>
           <ReactPlayer
@@ -152,8 +148,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Replace Air Filter</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Replace your filter if it isn't up to par!
             </p>
           </div>
           <ReactPlayer
@@ -162,7 +157,7 @@ export default class Battery extends React.Component {
             width="100%"
           />
         </div>
-
+        </div> 
           </div>
           
           

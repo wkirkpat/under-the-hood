@@ -16,7 +16,7 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Spark Plugs</h1>
-        </div>     
+          <hr className="my-5" ></hr>
            
 
        
@@ -35,8 +35,8 @@ export default class Battery extends React.Component {
             <h5 className="card-title">
             Check and Replace Spark Plugs</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Checking and replacing your spark plugs aren't as hard as you think! Check it out below!
+
             </p>
           </div>
           <ReactPlayer
@@ -46,6 +46,7 @@ export default class Battery extends React.Component {
           />
         </div>
         </div>
+        </div> 
     );
   }
 }

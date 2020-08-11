@@ -16,8 +16,8 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Tire Maintenance</h1>
-        </div>     
-           
+        
+          <hr className="my-5" ></hr>
 
        
 
@@ -34,8 +34,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Change Your Tire</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Don't sit in your car in the heat or cold waiting for someone to come change your tire for you. 
             </p>
           </div>
           <ReactPlayer
@@ -57,8 +56,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Pressure</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              This isn't as complicated as it seems. All you need is a pressure guage. 
             </p>
           </div>
           <ReactPlayer
@@ -82,8 +80,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Rotate Tire</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Tires need to be rotated regularly to get the best wear and longevity. Save money and extend your tires' life by doing it yourself!
             </p>
           </div>
           <ReactPlayer
@@ -106,8 +103,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Thread</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+             Avoid dangerous blowouts by making sure your tire thread is thick enough to be safe. 
             </p>
           </div>
           <ReactPlayer
@@ -116,10 +112,8 @@ export default class Battery extends React.Component {
             width="100%"
           />
         </div>
-
-
-
-          </div>
+        </div>     
+         </div>
           
           
 
