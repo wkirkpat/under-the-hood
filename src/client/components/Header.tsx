@@ -26,20 +26,24 @@ export default class Header extends React.Component<
           className="ml-2"
         >
           {this.props.hasMenu ? <MenuButton/> : <div style={{flex:"1 2"}}/>}
-           <h3 className="mt-4" style={{flex: "8", textAlign:"center", color:"#ffffff"}}>{this.props.title}</h3>
+          <div style={{flex:"8"}}>
+             <img style={{height:"200%"}} src="images/logo4.png"/>
+             <h3 className="mt-4 headerFont" style={{display:"inline-block", textAlign: "center", color:"#ffffff"}}>{this.props.title}</h3>
+           </div>
           {this.props.hasProfile ?
-            <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center"}}>
-              <div
+            <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center", }}>
+              <img src = "images/pp.png"
                 style={{
                   display: "block",
                   height: "50px",
                   width: "50px",
-                  backgroundColor: "#a3a3a3",
-                  margin: "auto"
+                  backgroundColor: "#d5c8c5",
+                  margin: "auto",
+                  borderRadius:"12px"
                 }}
                 className="mt-4"
               />
-              <span>{this.state.userInfo.name}</span>
+              <span style = {{color: "white", fontSize: "small"}}>{this.state.userInfo.name}</span>
             </Link> : this.props.hasLogin ? (
             <div className="mt-4 mr-3" style={{flex: "1 2"}}>
               <button className="btn btn-sm border border-dark mr-2 btn-light">

@@ -16,7 +16,7 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Fluid Maintenance</h1>
-        </div>     
+          <hr className="my-5" ></hr>
            
 
        
@@ -34,8 +34,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Coolant Levels</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Air conditioning not as cool as it should be? You might need to check your coolant level. 
             </p>
           </div>
           <ReactPlayer
@@ -57,8 +56,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Transmission Fluid</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              One of the worst things that can happen to your car is having the transmission lock up. Make sure it doesn't by checking the transmission fluid level. 
             </p>
           </div>
           <ReactPlayer
@@ -82,8 +80,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Cooling Fluid Exchange</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              If your engine is running hot, you might need to flush your antifreeze. Check this videe out to learn how. 
             </p>
           </div>
           <ReactPlayer
@@ -106,8 +103,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Transfer Case Fluid</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              If your car is having problems switching gears, you may need to change your transfer case fluid. 
             </p>
           </div>
           <ReactPlayer
@@ -117,7 +113,7 @@ export default class Battery extends React.Component {
           />
         </div>
 
-
+        </div> 
 
           </div>
           

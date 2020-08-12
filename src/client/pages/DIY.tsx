@@ -34,13 +34,21 @@ const DIY: React.SFC<IDIYProps> = (props) => {
           <hr />
           <div style={{ paddingLeft: "20px" }}><Link style={{color:"black"}} to={`${url}/shocksandstruts`}>Shocks and Struts</Link></div>
           <hr />
-          <div style={{ paddingLeft: "20px" }}><Link style={{color:"black"}} to={`${url}/windshieldwipers`}>Wind Shield Wipers</Link></div>
+          <div style={{ paddingLeft: "20px" }}><Link style={{color:"black"}} to={`${url}/windshieldwipers`}>Windield Wipers</Link></div>
           <hr style={{ marginBottom: "0px" }} />
         </div>
         <div style={{ flex: "5" }}>
             <Switch>
               <Route exact path={path}>
-                <h3 className="mx-auto mt-3" style={{width: "700px"}}>Choose a Topic to Learn About!</h3>
+              <div className="container">
+              <div className="jumbotron" style={{
+              backgroundColor: "#ffffff",
+            }}>
+              <h1 className="display-4">Choose a Topic to Learn About! </h1>
+
+  <hr className="my-5" ></hr>
+  <img src ="images/diy.jpg" width= "100%"/>
+</div> </div>
               </Route>
               <Route path={`${path}/:diyID`}>
                 <DIYFuncItem/>

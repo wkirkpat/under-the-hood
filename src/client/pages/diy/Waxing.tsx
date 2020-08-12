@@ -16,7 +16,7 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Car Wax</h1>
-        </div>     
+          <hr className="my-5" ></hr>
            
 
        
@@ -35,8 +35,7 @@ export default class Battery extends React.Component {
             <h5 className="card-title">
 How to Wax Your Car</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+             Wax on, wax off! Make sure your car looks fresh and clean so that you can show it off!
             </p>
           </div>
           <ReactPlayer
@@ -46,6 +45,7 @@ How to Wax Your Car</h5>
           />
         </div>
         </div>
+        </div> 
     );
   }
 }

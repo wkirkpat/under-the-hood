@@ -16,7 +16,7 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Shock and Strut Maintenance</h1>
-        </div>     
+          <hr className="my-5" ></hr>
            
 
        
@@ -35,8 +35,7 @@ export default class Battery extends React.Component {
             <h5 className="card-title">
             Check Shock and Struts</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Bumpy ride? Make sure your shocks and struts are ok. 
             </p>
           </div>
           <ReactPlayer
@@ -60,8 +59,7 @@ export default class Battery extends React.Component {
             <h5 className="card-title">
             Shocks and Struts Replacement</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Save some money and fix your shocks and struts yourself. You got this!
             </p>
           </div>
           <ReactPlayer
@@ -72,8 +70,7 @@ export default class Battery extends React.Component {
           />
         </div>
 
-
-
+        </div> 
         </div>
     );
   }

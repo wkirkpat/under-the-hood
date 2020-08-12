@@ -16,7 +16,7 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Light Replacement</h1>
-        </div>     
+          <hr className="my-5" ></hr>
            
 
        
@@ -34,8 +34,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Head Lights </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Police will pull you over if your head lights aren't working properly. Avoid that issue by changing them yourself.
             </p>
           </div>
           <ReactPlayer
@@ -57,8 +56,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Turn Signal</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Don't get caught in a dangerous situation. Make sure your turn signals are functioning properly. 
             </p>
           </div>
           <ReactPlayer
@@ -83,8 +81,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Brake Signal</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Malfunctioning brake lights are even more dangerous. You don't have to depend on someone else to change them. 
             </p>
           </div>
           <ReactPlayer
@@ -96,7 +93,7 @@ export default class Battery extends React.Component {
         </div>
 
         
-
+        </div> 
 
 
 

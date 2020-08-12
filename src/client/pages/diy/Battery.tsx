@@ -14,7 +14,7 @@ export default class Battery extends React.Component {
           }}
         >
           <h1 className="display-4">DIY Battery Maintenance</h1>
-        </div>
+          <hr className="my-5" ></hr>
 
         <div className="card">
           <div
@@ -27,8 +27,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Check Battery</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Having problems starting your engine? Watch the video below to find out if there is anything wrong with your battery. 
             </p>
           </div>
           <ReactPlayer
@@ -52,8 +51,7 @@ export default class Battery extends React.Component {
           >
             <h5 className="card-title">Battery Replacement</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              If you checked your battery and found out it's on your last leg, you can change it yourself with this video!
             </p>
           </div>
           <ReactPlayer
@@ -61,6 +59,7 @@ export default class Battery extends React.Component {
             url="https://youtu.be/qz3upAdRuZs"
             width="100%"
           />
+        </div>
         </div>
       </div>
     );

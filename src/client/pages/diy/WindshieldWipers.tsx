@@ -16,8 +16,8 @@ export default class Battery extends React.Component {
 
             
           <h1 className="display-4">DIY Windshield Wiper Care</h1>
-        </div>     
-           
+       
+          <hr className="my-5" ></hr>
 
        
 
@@ -36,8 +36,7 @@ export default class Battery extends React.Component {
             
 How to Replace Windshield Wiper</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              This a quick and simple fix to avoid being caught in the rain and unable to see because the windshield wipers don't work. 
             </p>
           </div>
           <ReactPlayer
@@ -47,6 +46,7 @@ How to Replace Windshield Wiper</h5>
           />
         </div>
         </div>
+        </div> 
     );
   }
 }
