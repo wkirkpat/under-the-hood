@@ -5,22 +5,22 @@
             {
                 "icon": "images/ewl/engine_temp.jpg",
                 "title": "Engine Temperature Warning Light",
-                "description": "Indicator light means the engine temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks."
+                "description": "Dashboard light indicates the temperature of the engine has exceeded normal limits. Next steps would be to check coolant level, fan operation, radiator cap, coolant leaks."
             },
             {
                 "icon": "images/ewl/battery_charge.jpg",
                 "title": "Battery Charge Warning Light",
-                "description": "Indicator light means that the car’s charging system is short of power or is not charging properly. It normally indicates a problem with the battery itself or the alternator."
+                "description": "Dashboard light indicates issues with the car’s charging system. There could be a shortage of power or an issue with charging. These issues involve the battery and or alternator."
             },
             {
                 "icon": "images/ewl/oil_pressure.jpg",
                 "title": "Oil Pressure Warning Light",
-                "description": "Indicator light means loss of oil pressure, meaning lubrication is low or lost completely. Immediately check the oil level and pressure."
+                "description": "Dashboard light indicates loss of oil pressure. Next step would be to check the oil pressure and level."
             },
             {
                 "icon": "images/ewl/brake_warning.jpg",
                 "title": "Brake Warning Light",
-                "description": "Indicator light turns on when the handbrake is on. If it lit continuously, it means that hydraulic pressure has been lost in one side of the brake system or that the fluid level in the master cylinder is dangerously low (due to a leak somewhere in the brake system)."
+                "description": "Dashboard light indicates the handbrake is on. When lit continuously, indicates either hydraulic pressure has been lost in one side of the brake system or the master cylinder fluid level is dangerously low."
             }
         ]
     },
@@ -30,202 +30,202 @@
             {
                 "icon": "images/ewl/transmission_temp.jpg",
                 "title": "Transmission Temperature",
-                "description": "Indicator light means the engine temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks."
+                "description": "Dashboard light indicates the engine temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks."
             },
             {
                 "icon": "images/ewl/tire_pressure.jpg",
                 "title": "Tire Pressure Warning Light",
-                "description": "Indicator light means the pressure is low in one of your tires."
+                "description": "Dashboard light indicates low tire pressure."
             },
             {
                 "icon": "images/ewl/traction_control.jpg",
                 "title": "Traction Control Off",
-                "description": "Indicator light means that the vehicles TCS (traction control system) has been deactivated."
+                "description": "Dashboard light indicates deactivation of the vehicles traction control system."
             },
             {
                 "icon": "images/ewl/steering_lock.jpg",
                 "title": "Steering Wheel Lock",
-                "description": "Indicator light means your steering wheel is locked and can not be moved. To turn off the steering lock, insert the key into the ignition and turn it to at least the first position while turning the steering wheel in either direction."
+                "description": " Dashboard light indicates lockage of the steering wheel. To diasble lockage, insert the key into the ignition and turn it to at least the first position while turning the steering wheel in either direction."
             },
             {
                 "icon": "images/ewl/tow_hitch.jpg",
                 "title": "Trailer Tow Hitch Warning",
-                "description": "Indicator lights mean that the tow hitch is unlocked or that there’s an issue with the lighting system."
+                "description": "Dashboard light indicates that the tow hitch is unlocked or that there’s an issue with the lighting system."
             },
             {
                 "icon": "images/ewl/traction_control.jpg",
                 "title": "Traction Control Light",
-                "description": "Indicator light turns on when the vehicle TCS (traction control system) is activated."
+                "description": "Dashboard light indicates when the vehicle TCS (traction control system) is activated."
             },
             {
                 "icon": "images/ewl/service_vehicle.jpg",
                 "title": "Service Vehicle Soon",
-                "description": "Indicator light turns on when there is a fault condition in an area of the vehicle chassis systems such as—the anti-lock (ABS) brake system, the traction control (TCS) system, the electronic suspension system, or the brake hydraulic system."
+                "description": "Dashboard light indicates when there is a fault condition in an area of the vehicle chassis systems such as—the anti-lock (ABS) brake system, the traction control (TCS) system, the electronic suspension system, or the brake hydraulic system."
             },
             {
                 "icon": "images/ewl/security_alert.jpg",
                 "title": "Security Alert",
-                "description": "Indicator light will turn on momentarily if the ignition switch is locked and will need the proper transponder-equipped key to restart. If the light is visible when the vehicle is on, then it typically indicates a malfunction in the security system."
+                "description": "Dashboard light indicates if the ignition switch is locked and will need the proper transponder-equipped key to restart."
             },
             {
                 "icon": "images/ewl/side_airbag.jpg",
                 "title": "Side Airbag",
-                "description": "Indicator light means a fault with the side airbag."
+                "description": "Dashboard light indicates a fault with the side airbag."
             },
             {
                 "icon": "images/ewl/reduced_power.jpg",
                 "title": "Reduced Power Warning",
-                "description": "Indicator light means that the Engine Computer has limited engine power output."
+                "description": "Dashboard light indicates that the Engine Computer has limited engine power output."
             },
             {
                 "icon": "images/ewl/seat_belt.jpg",
                 "title": "Seat Belt Indicator",
-                "description": "Indicator light means that a seat belt has not been secured for a passenger in the vehicle."
+                "description": "Dashboard light indicates that a seat belt has not been secured for a passenger in the vehicle."
             },
             {
                 "icon": "images/ewl/press_clutch.jpg",
                 "title": "Press Clutch Pedal",
-                "description": "Indicator to push the clutch."
+                "description": "Dashboard light indicates to push the clutch."
             },
             {
                 "icon": "images/ewl/powertrain_fault.jpg",
                 "title": "Powertrain Fault",
-                "description": "Indicator light turns on when a powertrain or AWD fault has been detected. Contact your mechanic as soon as possible."
+                "description": "Dashboard light indicates when a powertrain or AWD fault has been detected. Contact your mechanic as soon as possible."
             },
             {
                 "icon": "images/ewl/power_steering.jpg",
                 "title": "Power Steering Warning Light",
-                "description": "Indicator light turns on if there is an issue with the power steering system, and will be disabled until fixed."
+                "description": "Dashboard light indicates if there is an issue with the power steering system, and will be disabled until fixed."
             },
             {
                 "icon": "images/ewl/press_brake.jpg",
                 "title": "Press Brake Pedal",
-                "description": "Indicator to push the brake pedal."
+                "description": "Dashboard light indicates to push the brake pedal."
             },
             {
                 "icon": "images/ewl/parking_brake.jpg",
                 "title": "Parking Brake Light",
-                "description": "Indicator light means park brake is on."
+                "description": "Dashboard light indicates park brake is on."
             },
             {
                 "icon": "images/ewl/overdrive.jpg",
                 "title": "Overdrive Light",
-                "description": "Indicator light means that the vehicle’s overdrive system has been manually turned off."
+                "description": "Dashboard light indicates that the vehicle’s overdrive system has been manually turned off."
             },
             {
                 "icon": "images/ewl/oil_change.jpg",
                 "title": "Oil Change Reminder",
-                "description": "Indicator light means that oil life has expired."
+                "description": "Dashboard light indicates means that oil life has expired."
             },
             {
                 "icon": "images/ewl/master_warning.jpg",
                 "title": "Master Warning Light",
-                "description": "Indicator light usually accompanied by another warning light and indicates that one or more warning systems have been detected."
+                "description": "Dashboard light indicates that one or more warning systems have been detected."
             },
             {
                 "icon": "images/ewl/info_warning.jpg",
                 "title": "Information Warning Light",
-                "description": "Indicator light will turn on when a new message is stored in the information display. It will be red or amber in color depending on the severity of the message and will remain on until the cause of the message has been rectified."
+                "description": "Dashboard light indicates will turn on when a new message is stored in the information display."
             },
             {
                 "icon": "images/ewl/icy_warning.jpg",
                 "title": "Icy Road Warning Light",
-                "description": "Indicator light turns on when the outside air starts to reach freezing temperatures, around 35°F or 3°C."
+                "description": "Dashboard light indicates when the outside air starts to reach freezing temperatures, around 35°F or 3°C."
             },
             {
                 "icon": "images/ewl/fuel_cap.jpg",
                 "title": "Gas/Fuel Cap",
-                "description": "Indicator light turns on if the gas/fuel cap is not properly tightened."
+                "description": "Dashboard light indicates an need for tightening of the gas cap."
             },
             {
                 "icon": "images/ewl/esp_control.jpg",
                 "title": "ESP Fault/Traction Control Malfunction",
-                "description": "Indicator light means that there is a problem with the vehicle’s traction control."
+                "description": "Dashboard light indicates that there is a malfunction with the vehicle’s traction control."
             },
             {
                 "icon": "images/ewl/electric_park.jpg",
                 "title": "Electric Park Brake",
-                "description": "Indicator light turns on when the electric parking brake has a malfunction."
+                "description": "Dashboard light indicates an issue with the electric parking brake."
             },
             {
                 "icon": "images/ewl/distance_warning.jpg",
                 "title": "Distance Warning",
-                "description": "Indicator light means that a vehicle in front is too close or is being approached too quickly, or that a stationary obstacle exists in the direction of travel."
+                "description": "Dashboard light indicates that a vehicle in front is too close or is being approached too quickly."
             },
             {
                 "icon": "images/ewl/clogged_filter.jpg",
                 "title": "Clogged Air Filter",
-                "description": "Indicator light turns on when there is reduced airflow to the engine. Have the air filter replaced or inspected."
+                "description": "Dashboard light indicates reduced airflow to the engine."
             },
             {
                 "icon": "images/ewl/child_lock.jpg",
                 "title": "Child Safety Lock",
-                "description": "Indicator light means child safety lock is active."
+                "description": "Dashboard light indicates that the child safety lock is in use."
             },
             {
                 "icon": "images/ewl/check_engine.jpg",
                 "title": "Check Engine or Malfunction Indicator Light (MIL)",
-                "description": "Indicator light turns on whenever the engine is turned on to check the bulb. If the light stays illuminated, the car’s diagnostic systems have detected a malfunction that needs to be investigated."
+                "description": "Dashboard light blinks to indicate the engine is turned. The light stays illuminated when a malfunction has been detected."
             },
             {
                 "icon": "images/ewl/catalytic_converter.jpg",
                 "title": "Catalytic Converter Warning",
-                "description": "Indicator light means the catalytic converter is either overheating or not operating as intended."
+                "description": "Dashboard light indicates the catalytic converter is either overheating or not operating properly."
             },
             {
                 "icon": "images/ewl/brake_fluid.jpg",
                 "title": "Brake Fluid",
-                "description": "Indicator light means that the brake fluid level is low."
+                "description": "Dashboard light indicates the brake fluid level is low."
             },
             {
                 "icon": "images/ewl/brake_pad.jpg",
                 "title": "Brake Pad Warning",
-                "description": "Indicator light means that the brake pads are worn."
+                "description": "Dashboard light indicates that the brake pads are worn."
             },
             {
                 "icon": "images/ewl/brake_lights.jpg",
                 "title": "Brake Lights Warning",
-                "description": "Indicator light means an exterior brake light bulb is defective. Check the operation of all the exterior brake light bulbs."
+                "description": "Dashboard light indicates a malfunction with the exterior brake light bulb."
             },
             {
                 "icon": "images/ewl/automatic_gearbox.jpg",
                 "title": "Automatic Gearbox Warning",
-                "description": "Indicator light means there’s a gearbox/transmission malfunction."
+                "description": "Dashboard light indicates an issue with the gearbox/transmission."
             },
             {
                 "icon": "images/ewl/abs.jpg",
                 "title": "Anti-lock Braking System (ABS)",
-                "description": "Indicator light means there may be a malfunction in the ABS system."
+                "description": "Dashboard light indicates an issue with in the ABS system."
             },
             {
                 "icon": "images/ewl/awd.jpg",
                 "title": "All Wheel Drive (AWD/4WD)",
-                "description": "Indicator light turns on when there is a malfunction with the 4WD system."
+                "description": "Dashboard light indicates an issue with the 4WD system."
             },
             {
                 "icon": "images/ewl/airbag.jpg",
                 "title": "Airbag Indicator",
-                "description": "Indicator light turns on when the front airbag is switched off. If this lamp lights up or flashes there is a fault in the airbag or seatbelt system."
+                "description": "Dashboard light indicates that the front airbag is off."
             },
             {
                 "icon": "images/ewl/airbag_deactivated.jpg",
                 "title": "Airbag Deactivated",
-                "description": "Indicator light turns on when there is a fault in the rear spoiler system."
+                "description": "Dashboard light indicates an issue with the rear spoiler system."
             },
             {
                 "icon": "images/ewl/adaptive_suspension.jpg",
                 "title": "Adaptive Suspension Dampers",
-                "description": "Indicator light means there is a need to contact an authorised repairer."
+                "description": "Dashboard light indicates there is a maintenece issue that will need to be repaired by an authorized mechanic"
             },
             {
                 "icon": "images/ewl/4wd.jpg",
                 "title": "4 Wheel Drive (4WD) LOCK Indicator Light",
-                "description": "Indicator light means that the vehicle’s 4WD Lock mode is activated."
+                "description": "Dashboard light indicates that the vehicle’s 4WD Lock mode is on."
             },
             {
                 "icon": "images/ewl/air_suspension.jpg",
                 "title": "Air Suspension",
-                "description": "Indicator light means that there is a problem with the air suspension bags, likely due to a leak or inflation issue."
+                "description": "Dashboard light indicates that there is leak or inflation problem with the air suspension bags."
             }
         ]
     },
@@ -235,57 +235,57 @@
             {
                 "icon": "images/ewl/low_beam.jpg",
                 "title": "Low Beam Indicator Light",
-                "description": "Indicator light means that the vehicles dipped beam is on."
+                "description": "Dashboard light indicates that the vehicles dipped beam is activated."
             },
             {
                 "icon": "images/ewl/lamp_out.jpg",
                 "title": "Lamp Out",
-                "description": "Indicator light means that there is an exterior light on the vehicle that is not functioning properly."
+                "description": "Dashboard light indicates that an exterior light of the car is not functioning properly."
             },
             {
                 "icon": "images/ewl/high_beam.jpg",
                 "title": "High Beam Light Indicator",
-                "description": "Indicator light means your car’s high beam headlights are on, or if the high beam flash function is used."
+                "description": "Dashboard light indicates the car’s high beam headlights are activated"
             },
             {
                 "icon": "images/ewl/headlight_range.jpg",
                 "title": "Headlight Range Control",
-                "description": "Indicator light turns on if there is an issue detected with the headlight range control system."
+                "description": "Dashboard light indicates an issue with the headlight range control system."
             },
             {
                 "icon": "images/ewl/front_fog.jpg",
                 "title": "Front Fog Lights",
-                "description": "Indicator light means front fog lights are turned on."
+                "description": "Dashboard light indicates front fog lights are turned activated."
             },
             {
                 "icon": "images/ewl/exterior_light.jpg",
                 "title": "Exterior Light Fault",
-                "description": "Indicator light means any exterior light on your car isn’t working."
+                "description": "Dashboard light indicates that an exterior light of the car isn’t not working properly."
             },
             {
                 "icon": "images/ewl/auto_high_beam.jpg",
                 "title": "Auto High Beam",
-                "description": "Indicator light means the Auto High Beam system has switched on high beam headlights."
+                "description": "Dashboard light indicates that the high beam headlights are in use."
             },
             {
                 "icon": "images/ewl/adaptive_light.jpg",
                 "title": "Adaptive Light System",
-                "description": "Indicator light will lit when adaptive headlights are turned on."
+                "description": "Dashboard light indicates  adaptive headlights are turned activated."
             },
             {
                 "icon": "images/ewl/side_light.jpg",
                 "title": "Side Light Indicator",
-                "description": "Indicator light will turn on when the normal headlights are in use."
+                "description": "Dashboard light indicates that the headlights are on."
             },
             {
                 "icon": "images/ewl/rear_fog_lights.jpg",
                 "title": "Rear Fog Lights Switched On",
-                "description": "Indicator light means rear fog lights are on."
+                "description": "Dashboard light indicates means rear fog lights are on."
             },
             {
                 "icon": "images/ewl/rain_light_sensor.jpg",
                 "title": "Rain and Light Sensor",
-                "description": "Indicator light means there is an issue with the sensor system. The wipers and lights will not function automatically."
+                "description": "Dashboard light indicates there is an issue with the sensor system of the wipers and lights."
             }
         ]
     },
@@ -295,57 +295,57 @@
             {
                 "icon": "images/ewl/windshield_defrost.jpg",
                 "title": "Windshield Defrost",
-                "description": "Indicator light means that the window defrost is in operation."
+                "description": "Dashboard light indicates that the window defrost is on."
             },
             {
                 "icon": "images/ewl/washer_fluid.jpg",
                 "title": "Washer Fluid Reminder",
-                "description": "Indicator light indicates if the windscreen washer fluid reservoir is nearly empty. Fill the washer fluid reservoir."
+                "description": "Dashboard light indicates if the windscreen washer fluid reservoir is almost empty."
             },
             {
                 "icon": "images/ewl/rear_window_defrost.jpg",
                 "title": "Rear Window Defrost",
-                "description": "Indicator light means that the rear window defrost is in operation."
+                "description": "Dashboard light indicates that the rear window defrost is on."
             },
             {
                 "icon": "images/ewl/low_fuel.jpg",
                 "title": "Low Fuel Level",
-                "description": "Indicator light means that the car is running low on fuel and will soon need a refill."
+                "description": "Dashboard light indicates that the car is running low on fuel."
             },
             {
                 "icon": "images/ewl/key_outside.jpg",
                 "title": "Key Not in Vehicle",
-                "description": "Indicator light means the key is not in the car."
+                "description": "Dashboard light indicates the key is not in the car."
             },
             {
                 "icon": "images/ewl/hood_open.jpg",
                 "title": "Hood/Bonnet Open",
-                "description": "Indicator light means that the car hood is not closed properly."
+                "description": "Dashboard light indicates that the car hood is not closed."
             },
             {
                 "icon": "images/ewl/hazard_lights.jpg",
                 "title": "Hazard Lights On",
-                "description": "Indicator light means hazard lights are turned on."
+                "description": "Dashboard light indicates hazard lights are on."
             },
             {
                 "icon": "images/ewl/fan.jpg",
                 "title": "Fan",
-                "description": "Indicator light means that the internal ventilation/fan is in operation."
+                "description": "Dashboard light indicates that the internal ventilation is on."
             },
             {
                 "icon": "images/ewl/door_ajar.jpg",
                 "title": "Door Ajar",
-                "description": "Indicator light turns on when one or more doors of the car are not shut properly."
+                "description": "Dashboard light indicates that one or more doors of the car are not shut."
             },
             {
                 "icon": "images/ewl/signal_indicators.jpg",
                 "title": "Direction/Signal Indicators",
-                "description": "Indicator light means that one of the turn signals (left or right) has been activated."
+                "description": "Dashboard light indicates that one of the turn signals has been turned on."
             },
             {
                 "icon": "images/ewl/car_ramp.jpg",
                 "title": "Car on Ramp",
-                "description": "Indicator light means that the vehicle is on a ramp/jack system."
+                "description": "Dashboard light indicates that the vehicle is on a ramp/jack system."
             }
         ]
     }
