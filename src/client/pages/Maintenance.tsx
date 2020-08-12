@@ -63,7 +63,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         className="carImage"
       ></img>
       </div>
-      <div className="container d-flex justify-content-between oilChange">
+      <div className="container d-flex justify-content-between oilChange" style={{marginBottom:"20px"}}>
         <div className="previousOilChange mt-2 mr-4">
           <h2 className="card-title pr-5">Previous Oil Change: </h2>
           <p className="card-text">Oil Type: {carInfo[0]?.oilType}</p>
@@ -99,7 +99,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
           </p>
         </div>
       </div>
-      <div className="container d-flex justify-content-between brakesChange">
+      <div className="container d-flex justify-content-between brakesChange" style={{marginBottom:"20px"}}>
       <div className="previousBrakeChange">
         <h2 className="card-title pr-5">Previous Brake Change:</h2>
         <h4 className="card-text">
@@ -265,7 +265,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p>Date: {moment(carInfo[0]?.brakeLines).add(24, "months").calendar()} </p>
       </div>
       </div>
-      <div className="container d-flex justify-content-between batteryChange">
+      <div className="container d-flex justify-content-between batteryChange" style={{marginBottom:"20px"}}>
       <div className="previousBatterySwap">
         <h2 className="card-title pr-5">Previous Battery Swap:</h2>
         <p className="card-text">Battery Size: {carInfo[0]?.batterySize}</p>
@@ -292,7 +292,7 @@ const Maintance: React.FC<IMaintenanceProps> = (props) => {
         <p className="card-text">Date: {moment(carInfo[0]?.batterySwap).add(48, "months").calendar()} </p>
       </div>
       </div>
-      <div className="container d-flex justify-content-between tireChange">
+      <div className="container d-flex justify-content-between tireChange" style={{marginBottom:"40px"}}>
       <div className="previousTireMaintenance">
         <h2 className="card-title pr-5">Previous Tire Maintenance</h2>
         <p className="card-text">Tires Rotated: {moment(carInfo[0]?.tireRotation).format(
