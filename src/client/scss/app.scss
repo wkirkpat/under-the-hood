@@ -85,6 +85,14 @@ $theme-colors: (
 background-color: #FF0000;
 }
 
+.headerFont {
+    font-family: "Orbitron", sans-serif;
+    font-size: 250%;
+}
+
+* {
+    font-family: 'Nunito', sans-serif ;
+}
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
