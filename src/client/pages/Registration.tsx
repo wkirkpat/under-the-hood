@@ -93,7 +93,7 @@ const Registration: React.FC<IRegistrationProps> = (props) => {
               onChange={(e) => setConfirmPass(e.target.value)}
             />
           </FormGroup>
-          <button onClick={handleRegister}>Register</button>
+          <button style={{borderRadius:"9px", backgroundColor:"#35b0c6", color:"white", padding:"5px 10px", fontWeight:"bold"}} onClick={handleRegister}>Register</button>
         </div>
       </div>
     </div>

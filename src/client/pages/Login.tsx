@@ -88,7 +88,7 @@ const Login: React.FC<ILoginProps> = (props) => {
                 />
               </FormGroup>
 
-              <button onClick={handleLogin}>
+              <button style={{borderRadius:"9px", backgroundColor:"#35b0c6", color:"white", padding:"5px 10px", fontWeight:"bold"}} onClick={handleLogin}>
                Sign In
               </button>
             </div>
