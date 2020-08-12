@@ -40,7 +40,7 @@ export default class Header extends React.Component<
               </Link>
             </div>
           ) : (
-            <div style={{ flex: "3 2" }}></div>
+            <div style={{ flex: "3 2" }} />
           )}
           <h3
             className="mt-4 headerFont"
@@ -49,7 +49,6 @@ export default class Header extends React.Component<
               display: "inline-block",
               textAlign: "center",
               color: "#ffffff",
-              marginBottom: "0",
             }}
           >
             {this.props.title}
@@ -60,25 +59,8 @@ export default class Header extends React.Component<
                 <img
                   src="images/pp.png"
                   style={{
-                    height: "36%",
-                    display: "inline-block",
-                    marginLeft: "20px",
-                  }}
-                />
-              </div>
-            </Link>
-          ) : (
-            <div style={{ flex: "3 2" }} />
-          )}
-          {this.props.hasProfile ? (
-            <Link to="/profile" style={{ flex: "3 2", margin: "0 20px" }}>
-              <div style={{ textAlign: "center", float: "right" }}>
-                <img
-                  src="images/pp.png"
-                  style={{
                     display: "block",
-                    height: "50px",
-                    width: "50px",
+                    height: "50%",
                     backgroundColor: "#d5c8c5",
                     margin: "auto",
                     borderRadius: "12px",
@@ -107,9 +89,7 @@ export default class Header extends React.Component<
             <div style={{ flex: "3 2" }} />
           )}
         </div>
-        <div style={{ textAlign: "center", color: "white" }}>
-          {this.props.subtitle}
-        </div>
+        <div style={{ textAlign: "center" }}>{this.props.subtitle}</div>
       </div>
     );
   }
