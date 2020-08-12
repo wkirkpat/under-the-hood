@@ -30,7 +30,9 @@ export default class Home extends React.Component<IHomeProps> {
         <div style={{ textAlign: "center" }}>
 
 
+          <div className=" d-flex justify-content-center" >
           <div style={{ color: "#ffffffbd", position: "absolute", bottom: "8vh", textAlign: "center", fontSize: 70, fontWeight: "bold", height: "25vh" }}>Know how to properly care for your car</div>
+          </div>
         </div>
         <div style={{ borderStyle: "solid", height: "5vh", display: "flex", flexDirection: "row" }}>
           <div style={{ height: "100%", backgroundColor: "#fafafa", textAlign: "center", border: ".5px solid black", padding: "0 30px", lineHeight: "200%" }}>Airbag Recall</div>
