@@ -25,23 +25,22 @@ export default class Header extends React.Component<
           }}
           className="ml-2"
         >
-          {this.props.hasMenu ? <div style={{flex:"3 2"}}><MenuButton/><Link to="/home"><img style={{height:"36%", display:"inline-block", marginLeft:"20px"}} src="images/logo4.png"/></Link></div> : <div style={{flex:"3 2"}}/>}
-          <h3 className="mt-4 headerFont" style={{flex: "8", display: "inline-block", textAlign: "center", color:"#ffffff", marginBottom:"0"}}>{this.props.title}</h3>
-          {this.props.hasProfile ?
-            <Link to="/profile" style={{flex: "3 2", margin:"0 20px" }}>
-              <div style={{textAlign:"center", float:"right"}}>
-              <img src = "images/pp.png"
-                style={{
-                  height: "36%",
-                  display: "inline-block",
-                  marginLeft: "20px",
-                }}
-                src="images/logo4.png"
-              />
+          {this.props.hasMenu ? (
+            <div style={{ flex: "3 2" }}>
+              <MenuButton />
+              <Link to="/home">
+                <img
+                  style={{
+                    height: "36%",
+                    display: "inline-block",
+                    marginLeft: "20px",
+                  }}
+                  src="images/logo4.png"
+                />
               </Link>
             </div>
           ) : (
-            <div style={{ flex: "3 2" }} />
+            <div style={{ flex: "3 2" }}></div>
           )}
           <h3
             className="mt-4 headerFont"
@@ -50,10 +49,27 @@ export default class Header extends React.Component<
               display: "inline-block",
               textAlign: "center",
               color: "#ffffff",
+              marginBottom: "0",
             }}
           >
             {this.props.title}
           </h3>
+          {this.props.hasProfile ? (
+            <Link to="/profile" style={{ flex: "3 2", margin: "0 20px" }}>
+              <div style={{ textAlign: "center", float: "right" }}>
+                <img
+                  src="images/pp.png"
+                  style={{
+                    height: "36%",
+                    display: "inline-block",
+                    marginLeft: "20px",
+                  }}
+                />
+              </div>
+            </Link>
+          ) : (
+            <div style={{ flex: "3 2" }} />
+          )}
           {this.props.hasProfile ? (
             <Link to="/profile" style={{ flex: "3 2", margin: "0 20px" }}>
               <div style={{ textAlign: "center", float: "right" }}>
@@ -91,7 +107,9 @@ export default class Header extends React.Component<
             <div style={{ flex: "3 2" }} />
           )}
         </div>
-        <div style={{ textAlign: "center", color:"white" }}>{this.props.subtitle}</div>
+        <div style={{ textAlign: "center", color: "white" }}>
+          {this.props.subtitle}
+        </div>
       </div>
     );
   }
