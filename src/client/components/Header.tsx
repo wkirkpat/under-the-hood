@@ -25,13 +25,11 @@ export default class Header extends React.Component<
           }}
           className="ml-2"
         >
-          {this.props.hasMenu ? <MenuButton/> : <div style={{flex:"1 2"}}/>}
-          <div style={{flex:"8"}}>
-             <img style={{height:"200%"}} src="images/logo4.png"/>
-             <h3 className="mt-4 headerFont" style={{display:"inline-block", textAlign: "center", color:"#ffffff"}}>{this.props.title}</h3>
-           </div>
+          {this.props.hasMenu ? <div style={{flex:"3 2"}}><MenuButton/><img style={{height:"36%", display:"inline-block", marginLeft:"20px"}} src="images/logo4.png"/></div> : <div style={{flex:"3 2"}}/>}
+          <h3 className="mt-4 headerFont" style={{flex: "8", display: "inline-block", textAlign: "center", color:"#ffffff"}}>{this.props.title}</h3>
           {this.props.hasProfile ?
-            <Link to="/profile" style={{flex: "1 2", margin:"0 20px", textAlign:"center", }}>
+            <Link to="/profile" style={{flex: "3 2", margin:"0 20px" }}>
+              <div style={{textAlign:"center", float:"right"}}>
               <img src = "images/pp.png"
                 style={{
                   display: "block",
@@ -44,8 +42,9 @@ export default class Header extends React.Component<
                 className="mt-4"
               />
               <span style = {{color: "white", fontSize: "small"}}>{this.state.userInfo.name}</span>
+              </div>
             </Link> : this.props.hasLogin ? (
-            <div className="mt-4 mr-3" style={{flex: "1 2"}}>
+            <div className="mt-4 mr-3" style={{flex: "3 2"}}>
               <button className="btn btn-sm border border-dark mr-2 btn-light">
                 <Link className="text-dark" to="/login">
                   Login
@@ -57,7 +56,7 @@ export default class Header extends React.Component<
                 </Link>
               </button>
             </div>
-          ) : <div style={{flex: "1 2"}}/>}
+          ) : <div style={{flex: "3 2"}}/>}
         </div>
         <div style={{ textAlign: "center" }}>{this.props.subtitle}</div>
       </div>
