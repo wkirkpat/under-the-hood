@@ -31,7 +31,7 @@ export default class Header extends React.Component<
               <Link to="/home">
                 <img
                   style={{
-                    height: "36%",
+                    height: "30px",
                     display: "inline-block",
                     marginLeft: "20px",
                   }}
@@ -60,7 +60,7 @@ export default class Header extends React.Component<
                   src="images/pp.png"
                   style={{
                     display: "block",
-                    height: "50%",
+                    height: "40px",
                     backgroundColor: "#d5c8c5",
                     margin: "auto",
                     borderRadius: "12px",
