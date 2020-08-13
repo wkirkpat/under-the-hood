@@ -49,6 +49,7 @@ export default class Header extends React.Component<
               display: "inline-block",
               textAlign: "center",
               color: "#ffffff",
+              marginBottom:"0"
             }}
           >
             {this.props.title}
@@ -74,6 +75,7 @@ export default class Header extends React.Component<
             </Link>
           ) : this.props.hasLogin ? (
             <div className="mt-4 mr-3" style={{ flex: "3 2" }}>
+              <div style={{display:"inline-block", float:"right"}}>
               <button className="btn btn-sm border border-dark mr-2 btn-light">
                 <Link className="text-dark" to="/login">
                   Login
@@ -84,12 +86,13 @@ export default class Header extends React.Component<
                   Register
                 </Link>
               </button>
+              </div>
             </div>
           ) : (
             <div style={{ flex: "3 2" }} />
           )}
         </div>
-        <div style={{ textAlign: "center" }}>{this.props.subtitle}</div>
+        <div style={{ textAlign: "center", color:"white" }}>{this.props.subtitle}</div>
       </div>
     );
   }

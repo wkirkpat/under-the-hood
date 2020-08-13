@@ -24,19 +24,19 @@ export default class Landing extends React.Component<
           </div>
           <div style={{height:"10vh", textAlign:"center", fontSize:"x-large"}}>System Decoder * VIN Enable Search * Do It Yourself Guides</div>
           <div style={{fontSize:"x-large", textAlign:"center"}}>We’re here to help you save time and money on your car. You can browse our multiple services that will help pin down that pesky problem!</div>
-          <div style={{ borderRadius: "25px", backgroundColor: "#35b0c6", margin: "10vw" }}>
+          <div style={{ borderRadius: "25px", backgroundColor: "#35b0c6c9", margin: "10vw" }}>
             <div style={{padding:"5vh 5vw"}}>
               <div style={{padding:"30px"}}>
                 <img src="images/profilePic1.png" style={{ borderRadius: "50px", width: "90px" }} />
-                <span style={{ marginLeft: "30px", fontSize:"larger" }}>"I never knew changing my oil was this easy!" - Garrett</span>
+                <span style={{ marginLeft: "30px", fontSize:"larger", fontWeight:"bold", color:"white" }}>"I never knew changing my oil was this easy!" - Garrett</span>
               </div>
               <div style={{padding:"30px"}}>
                 <img src="images/profilePic2.png" style={{ borderRadius: "50px", width: "90px" }} />
-                <span style={{ marginLeft: "30px", fontSize:"larger" }}>"Getting reminders to change my tires is a great feature!" - Issac</span>
+                <span style={{ marginLeft: "30px", fontSize:"larger", fontWeight:"bold", color:"white" }}>"Getting reminders to change my tires is a great feature!" - Issac</span>
               </div>
               <div style={{padding:"30px"}}>
                 <img src="images/profilePic3.png" style={{ borderRadius: "50px", width: "90px" }} />
-                <span style={{ marginLeft: "30px", fontSize:"larger" }}>"I am now a car guru. Thank you Under My Hood!" - Hafeeza</span>
+                <span style={{ marginLeft: "30px", fontSize:"larger", fontWeight:"bold", color:"white" }}>"I am now a car guru. Thank you Under My Hood!" - Hafeeza</span>
               </div>
             </div>
           </div>
