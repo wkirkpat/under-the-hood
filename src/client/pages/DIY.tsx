@@ -47,7 +47,7 @@ const DIY: React.SFC<IDIYProps> = (props) => {
               <h1 className="display-4">Choose a Topic to Learn About! </h1>
 
   <hr className="my-5" ></hr>
-  <img src ="images/diy.jpg" width= "100%"/>
+  <img src ="images/diy.jpg" width= "100%"  style={{ borderStyle: "solid"}}/> 
 </div> </div>
               </Route>
               <Route path={`${path}/:diyID`}>

@@ -35,9 +35,9 @@ export default class Home extends React.Component<IHomeProps> {
           </div>
         </div>
         <div style={{ borderStyle: "solid", height: "5vh", display: "flex", flexDirection: "row" }}>
-          <div style={{ height: "100%", backgroundColor: "#fafafa", textAlign: "center",   lineHeight: "200%" }}>Airbag Recall</div>
+          <div style={{ marginLeft: "50px", height: "100%", backgroundColor: "#fafafa", textAlign: "center",   lineHeight: "200%" }}>Airbag Recall</div>
           <div style={{ marginLeft: "125px", marginRight: "150px", lineHeight: "200%" }}>Learn More Information</div>
-          <a style= {{ lineHeight: "200%", width: "0%", textAlign: "center"}} target="_blank" href="http://www.google.com">{"MORE"}</a>
+          <a style= {{ lineHeight: "200%", width: "0%", textAlign: "center"}} target="_blank" href="http://www.google.com">{"MORE>"}</a>
         </div>
         <ReactPhotoCollage width="100vw" height={["40vh", "40vh"]} layout={[3, 3]} photos={[{ src: "images/Home1.jpg" }, { src: "images/Home2.jpg" }, { src: "images/Home3.jpg" }, { src: "images/Home5.jpg" }, { src: "images/Home6.jpg" }, { src: "images/Home11.jpg" }]} showNumOfRemainingPhotos={false} />
 
